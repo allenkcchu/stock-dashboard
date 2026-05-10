@@ -37,5 +37,6 @@ def analyze_news(ticker: str, headlines_key: str, headlines: tuple) -> list:
     try:
         resp = model.generate_content(prompt)
         return _parse_json(resp.text)
-    except Exception:
+    except Exception as e:
+        st.warning(f"Gemini 錯誤：{e}")
         return [{"title": h, "sentiment": "neutral", "reason": "分析暫時無法取得"} for h in headlines[:NEWS_LIMIT]]
