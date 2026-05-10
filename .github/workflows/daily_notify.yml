@@ -1,0 +1,25 @@
+name: Daily LINE Notify
+
+on:
+  schedule:
+    - cron: '30 13 * * 1-5'  # 9:30 AM EDT (夏令時)
+    - cron: '30 14 * * 1-5'  # 9:30 AM EST (冬令時)
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yfinance ta pandas pytz requests numpy
+
+      - name: Send LINE notification
+        run: python scripts/send_line_notify.py
+        env:
+          LINE_NOTIFY_TOKEN: ${{ secrets.LINE_NOTIFY_TOKEN }}

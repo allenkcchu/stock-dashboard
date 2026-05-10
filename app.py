@@ -1,5 +1,7 @@
 import json
 import math
+from datetime import datetime
+import pytz
 import streamlit as st
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
@@ -12,6 +14,8 @@ from signals.rules import evaluate
 from ai.analyzer import analyze_news
 
 st.set_page_config(page_title="Stock Dashboard", layout="wide", page_icon="📈")
+
+ET = pytz.timezone("America/New_York")
 
 # ---------- helpers ----------
 
@@ -36,23 +40,53 @@ def fmt_val(v, decimals=2):
     return f"{v:.{decimals}f}"
 
 
-SIGNAL_EMOJI = {
-    "green": "🟢",
-    "red": "🔴",
-    "orange": "🟡",
-    "gray": "⚪",
-}
+def market_status() -> tuple[str, str]:
+    now = datetime.now(ET)
+    time_str = now.strftime("%m/%d %H:%M ET")
+    if now.weekday() >= 5:
+        return "closed", time_str
+    open_t = now.replace(hour=9, minute=30, second=0, microsecond=0)
+    close_t = now.replace(hour=16, minute=0, second=0, microsecond=0)
+    if open_t <= now <= close_t:
+        return "open", time_str
+    elif now < open_t:
+        return "pre", time_str
+    return "after", time_str
 
-SENTIMENT_EMOJI = {
-    "bullish": "🟢",
-    "bearish": "🔴",
-    "neutral": "⚪",
-}
+
+def news_time(n: dict) -> str:
+    ts = n.get("providerPublishTime")
+    if isinstance(ts, (int, float)):
+        dt = datetime.fromtimestamp(ts, tz=pytz.utc).astimezone(ET)
+        return dt.strftime("%m/%d %H:%M ET")
+    pub = n.get("content", {}).get("pubDate", "")
+    return pub[:16] if pub else ""
+
+
+SIGNAL_EMOJI = {"green": "🟢", "red": "🔴", "orange": "🟡", "gray": "⚪"}
+SENTIMENT_EMOJI = {"bullish": "🟢", "bearish": "🔴", "neutral": "⚪"}
 
 # ---------- pages ----------
 
 def page_overview(wl: dict):
     st.title("📈 Stock Dashboard")
+
+    # market status bar
+    status, time_str = market_status()
+    status_map = {
+        "open":  ("🟢 市場開盤中", "#1a9e5c"),
+        "pre":   ("🟡 盤前", "#e07b00"),
+        "after": ("🔴 盤後", "#555"),
+        "closed":("⚫ 週末休市", "#555"),
+    }
+    label, color = status_map[status]
+    st.markdown(
+        f'<div style="background:{color};padding:6px 14px;border-radius:6px;'
+        f'color:white;font-size:0.85rem;display:inline-block">'
+        f'{label} &nbsp;·&nbsp; {time_str}</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown("")
 
     tickers_tuple = tuple(all_tickers(wl))
     with st.spinner("載入報價中..."):
@@ -71,6 +105,7 @@ def page_overview(wl: dict):
                     "Ticker": ticker,
                     "價格": fmt_val(price),
                     "漲跌%": fmt_pct(chg),
+                    "Trail PE": "—",
                     "RSI": "—",
                     "MACD": "—",
                     "布林位置": "—",
@@ -85,6 +120,7 @@ def page_overview(wl: dict):
             vals = last_values(df)
             iv = get_atm_iv(ticker)
             sig = evaluate(vals, iv)
+            info = get_info(ticker)
 
             rsi = vals.get("rsi")
             macd_diff = vals.get("macd_diff")
@@ -105,6 +141,7 @@ def page_overview(wl: dict):
                 "Ticker": ticker,
                 "價格": fmt_val(price),
                 "漲跌%": fmt_pct(chg),
+                "Trail PE": fmt_val(info.get("trailingPE"), 1),
                 "RSI": fmt_val(rsi, 1),
                 "MACD": "金叉" if macd_diff and macd_diff > 0 else ("死叉" if macd_diff else "—"),
                 "布林位置": bb_pos(close, bb_upper, bb_lower),
@@ -116,11 +153,7 @@ def page_overview(wl: dict):
         df_table = pd.DataFrame(rows).set_index("Ticker")
         st.dataframe(df_table, use_container_width=True)
 
-    st.caption(f"資料每 15 分鐘更新一次 · IV 每 30 分鐘更新")
-
-    st.divider()
-    if st.button("查看個股詳細 →", help="在側邊欄選擇頁面"):
-        st.info("請從左側選單切換到「個股詳細」")
+    st.caption("報價快取 15 分鐘 · IV 快取 30 分鐘 · PE 快取 1 小時 · LINE 推播於每交易日 9:30 AM ET")
 
 
 def page_detail(wl: dict):
@@ -144,7 +177,7 @@ def page_detail(wl: dict):
 
     vals = last_values(df)
 
-    # --- signal banner ---
+    # signal banner
     if ticker not in NO_SIGNAL_TICKERS:
         sig = evaluate(vals, iv)
         colors = {"green": "#1a9e5c", "red": "#d63333", "orange": "#e07b00", "gray": "#666"}
@@ -155,7 +188,7 @@ def page_detail(wl: dict):
         )
         st.markdown("")
 
-    # --- price chart ---
+    # price chart
     fig = make_subplots(
         rows=4, cols=1,
         shared_xaxes=True,
@@ -211,7 +244,7 @@ def page_detail(wl: dict):
     fig.update_yaxes(gridcolor="#1e2130")
     st.plotly_chart(fig, use_container_width=True)
 
-    # --- fundamentals ---
+    # fundamentals
     st.subheader("基本面")
     col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric("Trailing PE", fmt_val(info.get("trailingPE"), 1))
@@ -221,7 +254,6 @@ def page_detail(wl: dict):
     col4.metric("市值", f"${mktcap/1e9:.1f}B" if mktcap else "—")
     col5.metric("Current IV", f"{iv:.0%}" if iv else "—")
 
-    # revenue trend
     fin = get_financials(ticker)
     rev_row = None
     for row_name in ("Total Revenue", "TotalRevenue", "Revenue"):
@@ -232,14 +264,16 @@ def page_detail(wl: dict):
         rev_df = pd.DataFrame({"Revenue ($B)": rev_row / 1e9})
         st.area_chart(rev_df, color="#6495ed")
 
-    # --- news + sentiment ---
+    # news + sentiment
     st.subheader("最新新聞")
 
     def _news_title(n: dict) -> str:
         return n.get("title") or n.get("content", {}).get("title", "")
 
     def _news_url(n: dict) -> str:
-        return n.get("link") or n.get("url") or n.get("content", {}).get("url", "") or n.get("content", {}).get("canonicalUrl", {}).get("url", "")
+        return (n.get("link") or n.get("url")
+                or n.get("content", {}).get("url", "")
+                or n.get("content", {}).get("canonicalUrl", {}).get("url", ""))
 
     valid_news = [n for n in news_raw if _news_title(n)]
 
@@ -249,17 +283,20 @@ def page_detail(wl: dict):
         with st.spinner("Claude 分析新聞中..."):
             analyzed = analyze_news(ticker, headlines_key, headlines)
 
-        for item in analyzed:
+        for item, raw in zip(analyzed, valid_news[:5]):
             sentiment = item.get("sentiment", "neutral")
             emoji = SENTIMENT_EMOJI.get(sentiment, "⚪")
-            title = item.get("title", "")
+            title = item.get("title", "") or _news_title(raw)
             summary = item.get("summary", "")
             reason = item.get("reason", "")
-            url = next((_news_url(n) for n in valid_news if _news_title(n) == title), "")
-            link = f"[{title}]({url})" if url else title
+            url = _news_url(raw)
+            t_str = news_time(raw)
+            header = f"{emoji} [{title}]({url})" if url else f"{emoji} {title}"
+            if t_str:
+                header += f"  `{t_str}`"
 
             sentiment_label = {"bullish": "偏多", "bearish": "偏空", "neutral": "中立"}.get(sentiment, "中立")
-            with st.expander(f"{emoji} {link}", expanded=True):
+            with st.expander(header, expanded=True):
                 if summary:
                     st.markdown(summary)
                 st.markdown(f"**市場看法：{emoji} {sentiment_label}** — {reason}")
