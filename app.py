@@ -234,8 +234,17 @@ def page_detail(wl: dict):
 
     # --- news + sentiment ---
     st.subheader("最新新聞")
-    if news_raw:
-        headlines = tuple(n.get("title", "") for n in news_raw[:5] if n.get("title"))
+
+    def _news_title(n: dict) -> str:
+        return n.get("title") or n.get("content", {}).get("title", "")
+
+    def _news_url(n: dict) -> str:
+        return n.get("link") or n.get("url") or n.get("content", {}).get("url", "") or n.get("content", {}).get("canonicalUrl", {}).get("url", "")
+
+    valid_news = [n for n in news_raw if _news_title(n)]
+
+    if valid_news:
+        headlines = tuple(_news_title(n) for n in valid_news[:5])
         headlines_key = "|".join(headlines)
         with st.spinner("Gemini 分析新聞情緒中..."):
             analyzed = analyze_news(ticker, headlines_key, headlines)
@@ -244,7 +253,7 @@ def page_detail(wl: dict):
             emoji = SENTIMENT_EMOJI.get(item.get("sentiment", "neutral"), "⚪")
             title = item.get("title", "")
             reason = item.get("reason", "")
-            url = next((n.get("link", "") for n in news_raw if n.get("title") == title), "")
+            url = next((_news_url(n) for n in valid_news if _news_title(n) == title), "")
             link = f"[{title}]({url})" if url else title
             st.markdown(f"{emoji} {link}  \n&nbsp;&nbsp;&nbsp;&nbsp;_{reason}_")
     else:
