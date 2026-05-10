@@ -1,12 +1,11 @@
 import json
 import streamlit as st
-import google.generativeai as genai
+from google import genai
 from config import GEMINI_MODEL, NEWS_LIMIT
 
 
-def _model():
-    genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-    return genai.GenerativeModel(GEMINI_MODEL)
+def _client():
+    return genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 
 def _parse_json(text: str):
@@ -21,7 +20,6 @@ def _parse_json(text: str):
 def analyze_news(ticker: str, headlines_key: str, headlines: tuple) -> list:
     if not headlines:
         return []
-    model = _model()
     bullet = "\n".join(f"- {h}" for h in headlines[:NEWS_LIMIT])
     prompt = f"""你是股票分析師。針對股票 {ticker}，分析以下新聞標題，判斷每則對股價是偏多、偏空還是中立。
 
@@ -35,7 +33,8 @@ def analyze_news(ticker: str, headlines_key: str, headlines: tuple) -> list:
 
 只回傳 JSON，不要其他文字。"""
     try:
-        resp = model.generate_content(prompt)
+        client = _client()
+        resp = client.models.generate_content(model=GEMINI_MODEL, contents=prompt)
         return _parse_json(resp.text)
     except Exception as e:
         st.warning(f"Gemini 錯誤：{e}")

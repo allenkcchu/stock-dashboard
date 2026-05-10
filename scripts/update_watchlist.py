@@ -8,7 +8,7 @@ import sys
 from datetime import datetime, timezone
 
 import feedparser
-import google.generativeai as genai
+from google import genai
 
 WATCHLIST_FILE = os.path.join(os.path.dirname(__file__), "..", "watchlist.json")
 
@@ -38,8 +38,7 @@ def analyze_with_gemini(current_watchlist: dict, headlines: list[str]) -> dict:
     if not api_key:
         raise EnvironmentError("GEMINI_API_KEY not set")
 
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    client = genai.Client(api_key=api_key)
 
     wl_json = json.dumps(current_watchlist, ensure_ascii=False, indent=2)
     headlines_text = "\n".join(f"- {h}" for h in headlines)
@@ -81,7 +80,7 @@ def analyze_with_gemini(current_watchlist: dict, headlines: list[str]) -> dict:
   "reasoning": "本週產業趨勢與現有清單吻合，各主題仍為市場焦點，無需調整。"
 }}"""
 
-    resp = model.generate_content(prompt)
+    resp = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
     text = resp.text.strip()
     if text.startswith("```"):
         parts = text.split("```")

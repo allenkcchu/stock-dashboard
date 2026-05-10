@@ -9,4 +9,4 @@ SIGNAL_PARAMS = {
 
 WATCHLIST_FILE = "watchlist.json"
 NEWS_LIMIT = 5
-GEMINI_MODEL = "gemini-1.5-flash"
+GEMINI_MODEL = "gemini-2.0-flash"
