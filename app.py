@@ -246,7 +246,7 @@ def page_detail(wl: dict):
     if valid_news:
         headlines = tuple(_news_title(n) for n in valid_news[:5])
         headlines_key = "|".join(headlines)
-        with st.spinner("Gemini 分析新聞情緒中..."):
+        with st.spinner("Claude 分析新聞中..."):
             analyzed = analyze_news(ticker, headlines_key, headlines)
 
         for item in analyzed:
@@ -305,7 +305,7 @@ def main():
         label_visibility="collapsed",
     )
     st.sidebar.divider()
-    st.sidebar.caption("資料來源：Yahoo Finance\nAI 分析：Google Gemini")
+    st.sidebar.caption("資料來源：Yahoo Finance\nAI 分析：Claude Haiku")
 
     if page == "總覽 Dashboard":
         page_overview(wl)
