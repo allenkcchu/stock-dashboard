@@ -8,7 +8,9 @@ from datetime import datetime
 
 import anthropic
 import httpx
+import pandas as pd
 import pytz
+import ta
 import yfinance as yf
 from fastapi import FastAPI, Request, HTTPException
 
@@ -19,6 +21,8 @@ LINE_CHANNEL_SECRET = os.environ["LINE_CHANNEL_SECRET"]
 ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
 LINE_PUSH_URL = "https://api.line.me/v2/bot/message/push"
 ET = pytz.timezone("America/New_York")
+WATCHLIST_URL = "https://raw.githubusercontent.com/allenkcchu/stock-dashboard/master/watchlist.json"
+NO_SIGNAL_TICKERS = {"SGOV"}
 
 
 def verify_signature(body: bytes, signature: str) -> bool:
@@ -52,6 +56,61 @@ def _news_time(n: dict) -> str:
         dt = datetime.fromtimestamp(ts, tz=pytz.utc).astimezone(ET)
         return dt.strftime("%m/%d %H:%M ET")
     return ""
+
+
+def _simple_signal(closes: pd.Series) -> tuple[str, str]:
+    rsi = ta.momentum.RSIIndicator(closes, window=14).rsi().dropna()
+    if rsi.empty:
+        return "⚪", "中立"
+    v = float(rsi.iloc[-1])
+    if v < 35:
+        return "🟢", "賣Put"
+    if v > 65:
+        return "🔴", "賣Call"
+    return "⚪", "中立"
+
+
+def build_daily_summary() -> str:
+    r = httpx.get(WATCHLIST_URL, timeout=10)
+    watchlist = r.json()["watchlist"]
+
+    all_tickers = [t for ts in watchlist.values() for t in ts]
+    signal_tickers = [t for t in all_tickers if t not in NO_SIGNAL_TICKERS]
+
+    data = yf.download(all_tickers, period="3mo", auto_adjust=True, progress=False)
+
+    results = {}
+    for ticker in all_tickers:
+        try:
+            closes = (data["Close"][ticker] if isinstance(data.columns, pd.MultiIndex)
+                      else data["Close"]).dropna()
+            price = float(closes.iloc[-1])
+            chg = float((closes.iloc[-1] - closes.iloc[-2]) / closes.iloc[-2] * 100)
+            results[ticker] = {"price": price, "chg": chg, "closes": closes}
+        except Exception:
+            pass
+
+    now = datetime.now(ET)
+    lines = ["📈 Stock Dashboard", now.strftime("%Y/%m/%d %H:%M ET"), ""]
+
+    for theme, tickers in watchlist.items():
+        lines.append(f"【{theme}】")
+        for ticker in tickers:
+            d = results.get(ticker)
+            if not d:
+                lines.append(f"  ⚪ {ticker}  —")
+                continue
+            price_str = f"${d['price']:.1f}"
+            chg_str = f"{d['chg']:+.1f}%"
+            if ticker in NO_SIGNAL_TICKERS:
+                lines.append(f"  ⚪ {ticker}  {price_str} {chg_str}  ETF")
+            else:
+                emoji, label = _simple_signal(d["closes"])
+                lines.append(f"  {emoji} {ticker}  {price_str} {chg_str}  {label}")
+        lines.append("")
+
+    lines.append("輸入股票代碼查看新聞分析（例：NVDA）")
+    return "\n".join(lines)
 
 
 def get_news_analysis(ticker: str) -> str:
@@ -127,9 +186,14 @@ async def webhook(request: Request):
             params = dict(x.split("=") for x in event["postback"]["data"].split("&") if "=" in x)
             ticker = params.get("ticker", "").upper()
         elif event.get("type") == "message" and event.get("message", {}).get("type") == "text":
-            text = event["message"]["text"].strip().upper()
-            if text.isalpha() and 1 <= len(text) <= 6:
-                ticker = text
+            text = event["message"]["text"].strip()
+            if text == "每日摘要":
+                summary = await asyncio.to_thread(build_daily_summary)
+                await push_text(user_id, summary)
+                continue
+            upper = text.upper()
+            if upper.isalpha() and 1 <= len(upper) <= 6:
+                ticker = upper
 
         if ticker and user_id:
             analysis = await asyncio.to_thread(get_news_analysis, ticker)
