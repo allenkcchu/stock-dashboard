@@ -1,14 +1,14 @@
 """
 每週自動更新追蹤清單。由 GitHub Actions 執行。
-需要環境變數：GEMINI_API_KEY
+需要環境變數：ANTHROPIC_API_KEY
 """
 import json
 import os
 import sys
 from datetime import datetime, timezone
 
+import anthropic
 import feedparser
-from google import genai
 
 WATCHLIST_FILE = os.path.join(os.path.dirname(__file__), "..", "watchlist.json")
 
@@ -33,13 +33,12 @@ def fetch_headlines(limit: int = 30) -> list[str]:
     return headlines[:limit]
 
 
-def analyze_with_gemini(current_watchlist: dict, headlines: list[str]) -> dict:
-    api_key = os.environ.get("GEMINI_API_KEY")
+def analyze_with_claude(current_watchlist: dict, headlines: list[str]) -> dict:
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
-        raise EnvironmentError("GEMINI_API_KEY not set")
+        raise EnvironmentError("ANTHROPIC_API_KEY not set")
 
-    client = genai.Client(api_key=api_key)
-
+    client = anthropic.Anthropic(api_key=api_key)
     wl_json = json.dumps(current_watchlist, ensure_ascii=False, indent=2)
     headlines_text = "\n".join(f"- {h}" for h in headlines)
 
@@ -80,8 +79,13 @@ def analyze_with_gemini(current_watchlist: dict, headlines: list[str]) -> dict:
   "reasoning": "本週產業趨勢與現有清單吻合，各主題仍為市場焦點，無需調整。"
 }}"""
 
-    resp = client.models.generate_content(model="gemini-2.0-flash-lite", contents=prompt)
-    text = resp.text.strip()
+    msg = client.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=2048,
+        system="你是專業股票分析師，負責每週審查股票追蹤清單。只輸出 JSON，不要其他文字。",
+        messages=[{"role": "user", "content": prompt}],
+    )
+    text = msg.content[0].text.strip()
     if text.startswith("```"):
         parts = text.split("```")
         text = parts[1].lstrip("json").strip() if len(parts) > 1 else text
@@ -113,13 +117,12 @@ def apply_changes(wl_data: dict, result: dict) -> bool:
                 del wl_data["watchlist"][theme]
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    entry = {
+    wl_data["history"].append({
         "date": today,
         "action": "update",
         "changes": {"added": added, "removed": removed},
         "reasoning": reasoning,
-    }
-    wl_data["history"].append(entry)
+    })
 
     return modified
 
@@ -134,16 +137,15 @@ def main():
         print("無法取得新聞，跳過更新", file=sys.stderr)
         sys.exit(0)
 
-    print(f"取得 {len(headlines)} 則標題，送 Gemini 分析...")
-    result = analyze_with_gemini(wl_data["watchlist"], headlines)
+    print(f"取得 {len(headlines)} 則標題，送 Claude 分析...")
+    result = analyze_with_claude(wl_data["watchlist"], headlines)
 
     modified = apply_changes(wl_data, result)
 
     with open(WATCHLIST_FILE, "w", encoding="utf-8") as f:
         json.dump(wl_data, f, ensure_ascii=False, indent=2)
 
-    reasoning = result.get("reasoning", "")
-    print(f"分析完成：{reasoning}")
+    print(f"分析完成：{result.get('reasoning', '')}")
     print(f"清單{'已更新' if modified else '無變動'}，history 已寫入")
 
 

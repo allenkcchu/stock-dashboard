@@ -1,11 +1,11 @@
 import json
+import anthropic
 import streamlit as st
-from google import genai
-from config import GEMINI_MODEL, NEWS_LIMIT
+from config import ANTHROPIC_MODEL, NEWS_LIMIT
 
 
 def _client():
-    return genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
+    return anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
 
 
 def _parse_json(text: str):
@@ -43,9 +43,18 @@ def analyze_news(ticker: str, headlines_key: str, headlines: tuple) -> list:
 ]"""
     try:
         client = _client()
-        resp = client.models.generate_content(model=GEMINI_MODEL, contents=prompt)
-        return _parse_json(resp.text)
+        msg = client.messages.create(
+            model=ANTHROPIC_MODEL,
+            max_tokens=2048,
+            system=[{
+                "type": "text",
+                "text": "你是專業股票分析師，擅長分析財經新聞對個股的影響。回覆使用繁體中文，只輸出 JSON。",
+                "cache_control": {"type": "ephemeral"},
+            }],
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return _parse_json(msg.content[0].text)
     except Exception as e:
-        st.warning(f"Gemini 錯誤：{e}")
+        st.warning(f"AI 分析錯誤：{e}")
         return [{"title": h, "summary": "", "sentiment": "neutral", "reason": "分析暫時無法取得"}
                 for h in headlines[:NEWS_LIMIT]]

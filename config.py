@@ -9,4 +9,4 @@ SIGNAL_PARAMS = {
 
 WATCHLIST_FILE = "watchlist.json"
 NEWS_LIMIT = 5
-GEMINI_MODEL = "gemini-2.0-flash-lite"
+ANTHROPIC_MODEL = "claude-haiku-4-5-20251001"
