@@ -146,7 +146,7 @@ def build_theme_bubble(theme: str, tickers: list, signals: dict, prices: dict) -
 def build_header_bubble(now: datetime) -> dict:
     return {
         "type": "bubble",
-        "size": "kilo",
+        "size": "mega",
         "body": {
             "type": "box",
             "layout": "vertical",
