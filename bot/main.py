@@ -120,14 +120,20 @@ async def webhook(request: Request):
 
     data = json.loads(body)
     for event in data.get("events", []):
+        user_id = event.get("source", {}).get("userId", "")
+        ticker = ""
+
         if event.get("type") == "postback":
-            postback_data = event["postback"]["data"]
-            user_id = event["source"]["userId"]
-            params = dict(x.split("=") for x in postback_data.split("&") if "=" in x)
+            params = dict(x.split("=") for x in event["postback"]["data"].split("&") if "=" in x)
             ticker = params.get("ticker", "").upper()
-            if ticker:
-                analysis = await asyncio.to_thread(get_news_analysis, ticker)
-                await push_text(user_id, analysis)
+        elif event.get("type") == "message" and event.get("message", {}).get("type") == "text":
+            text = event["message"]["text"].strip().upper()
+            if text.isalpha() and 1 <= len(text) <= 6:
+                ticker = text
+
+        if ticker and user_id:
+            analysis = await asyncio.to_thread(get_news_analysis, ticker)
+            await push_text(user_id, analysis)
 
     return {"status": "ok"}
 
