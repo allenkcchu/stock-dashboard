@@ -250,12 +250,19 @@ def page_detail(wl: dict):
             analyzed = analyze_news(ticker, headlines_key, headlines)
 
         for item in analyzed:
-            emoji = SENTIMENT_EMOJI.get(item.get("sentiment", "neutral"), "⚪")
+            sentiment = item.get("sentiment", "neutral")
+            emoji = SENTIMENT_EMOJI.get(sentiment, "⚪")
             title = item.get("title", "")
+            summary = item.get("summary", "")
             reason = item.get("reason", "")
             url = next((_news_url(n) for n in valid_news if _news_title(n) == title), "")
             link = f"[{title}]({url})" if url else title
-            st.markdown(f"{emoji} {link}  \n&nbsp;&nbsp;&nbsp;&nbsp;_{reason}_")
+
+            sentiment_label = {"bullish": "偏多", "bearish": "偏空", "neutral": "中立"}.get(sentiment, "中立")
+            with st.expander(f"{emoji} {link}", expanded=True):
+                if summary:
+                    st.markdown(summary)
+                st.markdown(f"**市場看法：{emoji} {sentiment_label}** — {reason}")
     else:
         st.info("暫無新聞")
 
