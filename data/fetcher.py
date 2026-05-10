@@ -15,28 +15,51 @@ def get_history(ticker: str, period: str = "1y") -> pd.DataFrame:
 
 @st.cache_data(ttl=900)
 def get_info(ticker: str) -> dict:
-    try:
-        t = yf.Ticker(ticker)
-        info = t.info or {}
+    t = yf.Ticker(ticker)
+    result = {}
 
-        # fast_info 補充缺失的欄位
+    # fast_info — 穩定可靠
+    try:
+        fi = t.fast_info
+        result["marketCap"]    = getattr(fi, "market_cap", None)
+        result["currentPrice"] = getattr(fi, "last_price", None)
+        result["shares"]       = getattr(fi, "shares", None)
+    except Exception:
+        pass
+
+    # .info — 嘗試取 PE / EPS，可能為空
+    try:
+        info = t.info or {}
+        for key in ("trailingPE", "forwardPE", "trailingEps"):
+            val = info.get(key)
+            if val:
+                result[key] = val
+    except Exception:
+        pass
+
+    # 若 .info 沒有 EPS，從 income_stmt 計算
+    if not result.get("trailingEps"):
         try:
-            fi = t.fast_info
-            if not info.get("marketCap"):
-                info["marketCap"] = getattr(fi, "market_cap", None)
-            if not info.get("currentPrice"):
-                info["currentPrice"] = getattr(fi, "last_price", None)
+            fin = _get_income_stmt(t)
+            net_income = None
+            for row in ("Net Income", "NetIncome"):
+                if not fin.empty and row in fin.index:
+                    net_income = fin.loc[row].dropna().iloc[0]
+                    break
+            shares = result.get("shares")
+            if net_income and shares and shares > 0:
+                eps = net_income / shares
+                result["trailingEps"] = eps
+                price = result.get("currentPrice")
+                if price and eps > 0 and not result.get("trailingPE"):
+                    result["trailingPE"] = price / eps
         except Exception:
             pass
 
-        return info
-    except Exception:
-        return {}
+    return result
 
 
-@st.cache_data(ttl=900)
-def get_financials(ticker: str) -> pd.DataFrame:
-    t = yf.Ticker(ticker)
+def _get_income_stmt(t) -> pd.DataFrame:
     for attr in ("income_stmt", "financials"):
         try:
             df = getattr(t, attr)
@@ -45,6 +68,14 @@ def get_financials(ticker: str) -> pd.DataFrame:
         except Exception:
             continue
     return pd.DataFrame()
+
+
+@st.cache_data(ttl=900)
+def get_financials(ticker: str) -> pd.DataFrame:
+    try:
+        return _get_income_stmt(yf.Ticker(ticker))
+    except Exception:
+        return pd.DataFrame()
 
 
 @st.cache_data(ttl=900)
@@ -66,8 +97,7 @@ def get_atm_iv(ticker: str) -> float | None:
         fi = t.fast_info
         price = getattr(fi, "last_price", None)
         if not price:
-            info = t.info
-            price = info.get("currentPrice") or info.get("regularMarketPrice")
+            price = (t.info or {}).get("currentPrice") or (t.info or {}).get("regularMarketPrice")
         if not price:
             return None
         calls = chain.calls.dropna(subset=["impliedVolatility"])
