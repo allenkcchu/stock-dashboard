@@ -187,7 +187,7 @@ def main():
         print("LINE_CHANNEL_ACCESS_TOKEN or LINE_USER_ID not set", file=sys.stderr)
         sys.exit(1)
 
-    if not is_market_open_window():
+    if not is_market_open_window() and os.environ.get("FORCE_SEND") != "true":
         now = datetime.now(ET)
         print(f"Not in market open window ({now.strftime('%H:%M ET')}), skipping")
         sys.exit(0)

@@ -5,6 +5,10 @@ on:
     - cron: '30 13 * * 1-5'  # 9:30 AM EDT (夏令時)
     - cron: '30 14 * * 1-5'  # 9:30 AM EST (冬令時)
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Skip market hours check'
+        default: 'true'
 
 jobs:
   notify:
@@ -20,6 +24,8 @@ jobs:
         run: pip install yfinance ta pandas pytz requests numpy
 
       - name: Send LINE notification
-        run: python scripts/send_line_notify.py
+        run: python scripts/send_line_push.py
         env:
-          LINE_NOTIFY_TOKEN: ${{ secrets.LINE_NOTIFY_TOKEN }}
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+          FORCE_SEND: ${{ github.event.inputs.force }}
