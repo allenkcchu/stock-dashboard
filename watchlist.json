@@ -1,0 +1,26 @@
+{
+  "watchlist": {
+    "Positions": ["NOK", "TSM", "SGOV"],
+    "AI Chips": ["NVDA", "AMD", "AVGO", "MU", "INTC"],
+    "Data Center": ["VRT", "APH", "EME"],
+    "Energy/Nuclear": ["CEG", "GEV", "BWXT"],
+    "Defense": ["LMT", "RTX", "NOC"]
+  },
+  "history": [
+    {
+      "date": "2026-05-10",
+      "action": "init",
+      "changes": {
+        "added": {
+          "Positions": ["NOK", "TSM", "SGOV"],
+          "AI Chips": ["NVDA", "AMD", "AVGO", "MU", "INTC"],
+          "Data Center": ["VRT", "APH", "EME"],
+          "Energy/Nuclear": ["CEG", "GEV", "BWXT"],
+          "Defense": ["LMT", "RTX", "NOC"]
+        },
+        "removed": {}
+      },
+      "reasoning": "初始清單依據 2026 年五月產業趨勢建立。主要驅動力：Mag-7 合計投入 $650B AI 基礎建設 capex（帶動 AI 晶片與資料中心供應鏈）；AI 耗電需求激增推動核能與電網升級；美國 FY2026 國防預算達 $1 兆（+13.4%）。NOK/TSM/SGOV 為現有持倉。"
+    }
+  ]
+}

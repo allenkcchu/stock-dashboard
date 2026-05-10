@@ -1,0 +1,38 @@
+name: Update Watchlist
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'   # 每週一 UTC 14:00（台灣 22:00，加州 07:00）
+    - cron: '0 14 * * 4'   # 每週四 UTC 14:00
+  workflow_dispatch:         # 允許從 GitHub UI 手動觸發
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install google-generativeai feedparser
+
+      - name: Run update script
+        run: python scripts/update_watchlist.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet watchlist.json || (
+            git add watchlist.json &&
+            git commit -m "chore: auto-update watchlist $(date -u +%Y-%m-%d) [skip ci]" &&
+            git push
+          )
