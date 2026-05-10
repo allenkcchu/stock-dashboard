@@ -6,7 +6,7 @@ from plotly.subplots import make_subplots
 import pandas as pd
 
 from config import NO_SIGNAL_TICKERS, WATCHLIST_FILE
-from data.fetcher import get_history, get_info, get_news, get_atm_iv, batch_last_price
+from data.fetcher import get_history, get_info, get_financials, get_news, get_atm_iv, batch_last_price
 from indicators.compute import compute_indicators, last_values
 from signals.rules import evaluate
 from ai.analyzer import analyze_news
@@ -222,15 +222,15 @@ def page_detail(wl: dict):
     col5.metric("Current IV", f"{iv:.0%}" if iv else "—")
 
     # revenue trend
-    try:
-        t_obj = __import__("yfinance").Ticker(ticker)
-        fin = t_obj.financials
-        if fin is not None and not fin.empty and "Total Revenue" in fin.index:
-            rev = fin.loc["Total Revenue"].dropna().sort_index()
-            rev_df = pd.DataFrame({"Revenue ($B)": rev / 1e9})
-            st.area_chart(rev_df, color="#6495ed")
-    except Exception:
-        pass
+    fin = get_financials(ticker)
+    rev_row = None
+    for row_name in ("Total Revenue", "TotalRevenue", "Revenue"):
+        if not fin.empty and row_name in fin.index:
+            rev_row = fin.loc[row_name].dropna().sort_index()
+            break
+    if rev_row is not None and not rev_row.empty:
+        rev_df = pd.DataFrame({"Revenue ($B)": rev_row / 1e9})
+        st.area_chart(rev_df, color="#6495ed")
 
     # --- news + sentiment ---
     st.subheader("最新新聞")

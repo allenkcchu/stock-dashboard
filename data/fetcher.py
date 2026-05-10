@@ -16,9 +16,35 @@ def get_history(ticker: str, period: str = "1y") -> pd.DataFrame:
 @st.cache_data(ttl=900)
 def get_info(ticker: str) -> dict:
     try:
-        return yf.Ticker(ticker).info
+        t = yf.Ticker(ticker)
+        info = t.info or {}
+
+        # fast_info 補充缺失的欄位
+        try:
+            fi = t.fast_info
+            if not info.get("marketCap"):
+                info["marketCap"] = getattr(fi, "market_cap", None)
+            if not info.get("currentPrice"):
+                info["currentPrice"] = getattr(fi, "last_price", None)
+        except Exception:
+            pass
+
+        return info
     except Exception:
         return {}
+
+
+@st.cache_data(ttl=900)
+def get_financials(ticker: str) -> pd.DataFrame:
+    t = yf.Ticker(ticker)
+    for attr in ("income_stmt", "financials"):
+        try:
+            df = getattr(t, attr)
+            if df is not None and not df.empty:
+                return df
+        except Exception:
+            continue
+    return pd.DataFrame()
 
 
 @st.cache_data(ttl=900)
@@ -37,8 +63,11 @@ def get_atm_iv(ticker: str) -> float | None:
         if not exps:
             return None
         chain = t.option_chain(exps[0])
-        info = t.info
-        price = info.get("currentPrice") or info.get("regularMarketPrice")
+        fi = t.fast_info
+        price = getattr(fi, "last_price", None)
+        if not price:
+            info = t.info
+            price = info.get("currentPrice") or info.get("regularMarketPrice")
         if not price:
             return None
         calls = chain.calls.dropna(subset=["impliedVolatility"])
