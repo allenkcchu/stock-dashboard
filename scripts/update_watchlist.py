@@ -80,7 +80,7 @@ def analyze_with_gemini(current_watchlist: dict, headlines: list[str]) -> dict:
   "reasoning": "本週產業趨勢與現有清單吻合，各主題仍為市場焦點，無需調整。"
 }}"""
 
-    resp = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
+    resp = client.models.generate_content(model="gemini-2.0-flash-lite", contents=prompt)
     text = resp.text.strip()
     if text.startswith("```"):
         parts = text.split("```")
