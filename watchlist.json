@@ -1,10 +1,40 @@
 {
   "watchlist": {
-    "Positions": ["NOK", "TSM", "SGOV"],
-    "AI Chips": ["NVDA", "AMD", "AVGO", "MU", "INTC"],
-    "Data Center": ["VRT", "APH", "EME"],
-    "Energy/Nuclear": ["CEG", "GEV", "BWXT"],
-    "Defense": ["LMT", "RTX", "NOC"]
+    "Positions": [
+      "NOK",
+      "TSM",
+      "SGOV"
+    ],
+    "AI Chips": [
+      "NVDA",
+      "AMD",
+      "AVGO",
+      "MU",
+      "INTC"
+    ],
+    "Data Center": [
+      "VRT",
+      "APH",
+      "EME"
+    ],
+    "Energy/Nuclear": [
+      "CEG",
+      "GEV",
+      "BWXT"
+    ],
+    "Defense": [
+      "LMT",
+      "RTX",
+      "NOC"
+    ],
+    "AI Infrastructure": [
+      "ALAB",
+      "CRWV",
+      "PWR"
+    ],
+    "Nuclear Energy": [
+      "GEV"
+    ]
   },
   "history": [
     {
@@ -12,15 +42,55 @@
       "action": "init",
       "changes": {
         "added": {
-          "Positions": ["NOK", "TSM", "SGOV"],
-          "AI Chips": ["NVDA", "AMD", "AVGO", "MU", "INTC"],
-          "Data Center": ["VRT", "APH", "EME"],
-          "Energy/Nuclear": ["CEG", "GEV", "BWXT"],
-          "Defense": ["LMT", "RTX", "NOC"]
+          "Positions": [
+            "NOK",
+            "TSM",
+            "SGOV"
+          ],
+          "AI Chips": [
+            "NVDA",
+            "AMD",
+            "AVGO",
+            "MU",
+            "INTC"
+          ],
+          "Data Center": [
+            "VRT",
+            "APH",
+            "EME"
+          ],
+          "Energy/Nuclear": [
+            "CEG",
+            "GEV",
+            "BWXT"
+          ],
+          "Defense": [
+            "LMT",
+            "RTX",
+            "NOC"
+          ]
         },
         "removed": {}
       },
       "reasoning": "初始清單依據 2026 年五月產業趨勢建立。主要驅動力：Mag-7 合計投入 $650B AI 基礎建設 capex（帶動 AI 晶片與資料中心供應鏈）；AI 耗電需求激增推動核能與電網升級；美國 FY2026 國防預算達 $1 兆（+13.4%）。NOK/TSM/SGOV 為現有持倉。"
+    },
+    {
+      "date": "2026-05-11",
+      "action": "update",
+      "changes": {
+        "added": {
+          "AI Infrastructure": [
+            "ALAB",
+            "CRWV",
+            "PWR"
+          ],
+          "Nuclear Energy": [
+            "GEV"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞凸顯三項重要產業趨勢：(1) AI芯片熱度持續，Cerebras IPO、Lumentum、Teradyne等新興AI供應鏈廠商備受關注，建議新增AI基礎設施類別，納入Astera Labs(ALAB)解決AI瓶頸、CoreWeave(CRWV)數據中心需求、Quanta(PWR)電力基礎設施等；(2) 核能領域利多未衰，GE Vernova(GEV)獲明確看好並已在Energy/Nuclear清單中；(3) TSM、NVDA等核心持股獲正面評價，無需移除。現有清單AI Chips、Data Center、Energy/Nuclear主題均為新聞焦點，策略方向正確。新增AI Infrastructure類別以涵蓋更完整的AI生態鏈投資機會。"
     }
   ]
 }
