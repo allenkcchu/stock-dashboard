@@ -34,6 +34,11 @@
     ],
     "Nuclear Energy": [
       "GEV"
+    ],
+    "Satellite Communications": [
+      "TMUS",
+      "VZ",
+      "T"
     ]
   },
   "history": [
@@ -91,6 +96,21 @@
         "removed": {}
       },
       "reasoning": "本週新聞凸顯三項重要產業趨勢：(1) AI芯片熱度持續，Cerebras IPO、Lumentum、Teradyne等新興AI供應鏈廠商備受關注，建議新增AI基礎設施類別，納入Astera Labs(ALAB)解決AI瓶頸、CoreWeave(CRWV)數據中心需求、Quanta(PWR)電力基礎設施等；(2) 核能領域利多未衰，GE Vernova(GEV)獲明確看好並已在Energy/Nuclear清單中；(3) TSM、NVDA等核心持股獲正面評價，無需移除。現有清單AI Chips、Data Center、Energy/Nuclear主題均為新聞焦點，策略方向正確。新增AI Infrastructure類別以涵蓋更完整的AI生態鏈投資機會。"
+    },
+    {
+      "date": "2026-05-14",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Satellite Communications": [
+            "TMUS",
+            "VZ",
+            "T"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞中AT&T、Verizon、T-Mobile成立衛星至手機合資企業應對SpaceX威脅，標誌著衛星通訊領域成為電信業重要戰場。此趨勢未在現有清單中充分體現，應新增衛星通訊類別。其他新聞多為Jim Cramer個股評論或市場情緒分析，缺乏對追蹤清單中AI晶片、資料中心、防務、核能等既有主題的重大衝擊。Cerebras IPO消息屬AI晶片領域強化跡象，與現有NVDA等持倉相符。CoreWeave相關討論則支持AI基礎設施持倉邏輯。消費者情緒下滑提醒關注防禦性配置，但無需對當前清單做出移除操作。"
     }
   ]
 }
