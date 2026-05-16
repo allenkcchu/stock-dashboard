@@ -1,0 +1,35 @@
+name: Update Taiwan Market Data
+
+on:
+  schedule:
+    - cron: '0 10 * * 1-5'  # UTC 10:00 = 台灣 18:00（台股收盤後）
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests pandas lxml
+
+      - name: Update Taiwan data
+        run: python scripts/update_taiwan_daily.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet taiwan_data/market_data.csv || (
+            git add taiwan_data/market_data.csv &&
+            git commit -m "chore: update taiwan market data $(date -u +%Y-%m-%d) [skip ci]" &&
+            git push
+          )

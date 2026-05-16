@@ -66,6 +66,16 @@ def news_time(n: dict) -> str:
 SIGNAL_EMOJI = {"green": "🟢", "red": "🔴", "orange": "🟡", "gray": "⚪"}
 SENTIMENT_EMOJI = {"bullish": "🟢", "bearish": "🔴", "neutral": "⚪"}
 
+
+def _dark_layout(fig, height: int = 300):
+    fig.update_layout(
+        height=height, paper_bgcolor="#0e1117", plot_bgcolor="#0e1117",
+        font=dict(color="#fafafa"), margin=dict(l=0, r=0, t=20, b=0),
+        legend=dict(bgcolor="rgba(0,0,0,0)"),
+    )
+    fig.update_xaxes(gridcolor="#1e2130")
+    fig.update_yaxes(gridcolor="#1e2130")
+
 # ---------- pages ----------
 
 def page_overview(wl: dict):
@@ -304,6 +314,173 @@ def page_detail(wl: dict):
         st.info("暫無新聞")
 
 
+def page_taiwan():
+    from data.taiwan import load_market_data, get_tw_price_history
+
+    st.title("台灣大盤總覽")
+    mkt = load_market_data()
+
+    # --- 頂部指標 ---
+    twii_df = get_tw_price_history("^TWII", period="5d")
+    c1, c2, c3, c4 = st.columns(4)
+
+    if not twii_df.empty and len(twii_df) >= 2:
+        last = float(twii_df["Close"].iloc[-1])
+        prev = float(twii_df["Close"].iloc[-2])
+        chg = (last - prev) / prev * 100
+        c1.metric("加權指數", f"{last:,.0f}", f"{chg:+.2f}%")
+    else:
+        c1.metric("加權指數", "—")
+
+    if not mkt.empty:
+        lr = mkt.iloc[-1]
+        fini = lr.get("fini_net")
+        c2.metric("外資買賣超", f"{fini/1e8:+.1f}億" if fini is not None else "—")
+        fut = lr.get("futures_fini_net")
+        c3.metric("外資期貨淨口", f"{int(fut):+,}口" if fut is not None else "—")
+        pcr = lr.get("pcr_oi")
+        if pcr is not None:
+            label = "偏空" if pcr > 1.3 else ("偏多" if pcr < 0.7 else "中性")
+            c4.metric("PCR (OI)", f"{pcr:.2f}", label)
+        else:
+            c4.metric("PCR (OI)", "—")
+    else:
+        c2.metric("外資買賣超", "—")
+        c3.metric("外資期貨淨口", "—")
+        c4.metric("PCR (OI)", "—")
+
+    st.divider()
+
+    # --- 加權指數 5年走勢 ---
+    st.subheader("加權指數 (5年)")
+    twii = get_tw_price_history("^TWII", period="5y")
+    if not twii.empty:
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(
+            x=twii.index, y=twii["Close"],
+            fill="tozeroy", fillcolor="rgba(100,149,237,0.08)",
+            line=dict(color="#6495ed", width=1.5), name="TWII",
+        ))
+        for window, color in [(20, "#f4a261"), (60, "#e07b00"), (240, "#ff6b6b")]:
+            ma = twii["Close"].rolling(window).mean()
+            fig.add_trace(go.Scatter(x=twii.index, y=ma, name=f"MA{window}",
+                                     line=dict(width=1, color=color)))
+        _dark_layout(fig, 350)
+        st.plotly_chart(fig, use_container_width=True)
+
+    # --- 外部環境 ---
+    st.subheader("外部環境")
+    col_sox, col_vix = st.columns(2)
+
+    with col_sox:
+        st.caption("費半 SOX (5年)")
+        sox = get_tw_price_history("^SOX", period="5y")
+        if not sox.empty:
+            fig = go.Figure(go.Scatter(
+                x=sox.index, y=sox["Close"],
+                fill="tozeroy", fillcolor="rgba(52,211,153,0.08)",
+                line=dict(color="#34d399", width=1.5), name="SOX",
+            ))
+            _dark_layout(fig, 260)
+            st.plotly_chart(fig, use_container_width=True)
+
+    with col_vix:
+        st.caption("VIX 波動率 (5年)")
+        vix = get_tw_price_history("^VIX", period="5y")
+        if not vix.empty:
+            bar_colors = [
+                "#d63333" if v > 30 else "#f4a261" if v > 20 else "#1a9e5c"
+                for v in vix["Close"]
+            ]
+            fig = go.Figure(go.Bar(x=vix.index, y=vix["Close"],
+                                   marker_color=bar_colors, name="VIX"))
+            fig.add_hline(y=20, line_dash="dash", line_color="#f4a261", line_width=0.8)
+            fig.add_hline(y=30, line_dash="dash", line_color="#d63333", line_width=0.8)
+            _dark_layout(fig, 260)
+            st.plotly_chart(fig, use_container_width=True)
+
+    # --- 台積電 ---
+    st.subheader("台積電 2330.TW (5年)")
+    tsmc = get_tw_price_history("2330.TW", period="5y")
+    if not tsmc.empty:
+        fig = make_subplots(rows=2, cols=1, shared_xaxes=True,
+                            vertical_spacing=0.02, row_heights=[0.75, 0.25])
+        fig.add_trace(go.Candlestick(
+            x=tsmc.index, open=tsmc["Open"], high=tsmc["High"],
+            low=tsmc["Low"], close=tsmc["Close"], name="TSMC",
+            increasing_line_color="#1a9e5c", decreasing_line_color="#d63333",
+        ), row=1, col=1)
+        vol_colors = ["#1a9e5c" if c >= o else "#d63333"
+                      for c, o in zip(tsmc["Close"], tsmc["Open"])]
+        fig.add_trace(go.Bar(x=tsmc.index, y=tsmc["Volume"],
+                             marker_color=vol_colors, showlegend=False), row=2, col=1)
+        _dark_layout(fig, 420)
+        fig.update_layout(xaxis_rangeslider_visible=False)
+        st.plotly_chart(fig, use_container_width=True)
+
+    # --- 籌碼資料（需先執行 init 腳本）---
+    if mkt.empty or mkt.dropna(how="all").empty:
+        st.info(
+            "籌碼歷史資料尚未初始化。\n\n"
+            "請在本機執行：\n```\ncd stock_dashboard\npython scripts/init_taiwan_data.py\n```\n\n"
+            "執行約 15-20 分鐘，之後 GitHub Actions 每日自動更新。"
+        )
+        return
+
+    # --- 三大法人買賣超 ---
+    st.subheader("三大法人買賣超（億元）")
+    inst = mkt[["fini_net", "trust_net", "dealer_net"]].dropna(how="all") / 1e8
+    if not inst.empty:
+        fig = go.Figure()
+        for col, name, color in [
+            ("fini_net",    "外資",    "#6495ed"),
+            ("trust_net",   "投信",    "#1a9e5c"),
+            ("dealer_net",  "自營商",  "#f4a261"),
+        ]:
+            if col in inst.columns:
+                fig.add_trace(go.Bar(
+                    x=inst.index, y=inst[col], name=name,
+                    marker_color=color, opacity=0.85,
+                ))
+        fig.update_layout(barmode="relative")
+        _dark_layout(fig, 300)
+        st.plotly_chart(fig, use_container_width=True)
+
+    # --- 外資期貨淨部位 ---
+    st.subheader("外資台指期淨部位（口）")
+    fut_s = mkt["futures_fini_net"].dropna()
+    if not fut_s.empty:
+        ma20 = fut_s.rolling(20).mean()
+        bar_colors = ["#1a9e5c" if v >= 0 else "#d63333" for v in fut_s]
+        fig = go.Figure()
+        fig.add_trace(go.Bar(x=fut_s.index, y=fut_s, marker_color=bar_colors,
+                             name="淨部位", opacity=0.75))
+        fig.add_trace(go.Scatter(x=ma20.index, y=ma20, name="MA20",
+                                 line=dict(color="#f4a261", width=1.5)))
+        fig.add_hline(y=0, line_color="#ffffff", line_width=0.5)
+        _dark_layout(fig, 280)
+        st.plotly_chart(fig, use_container_width=True)
+
+    # --- PCR ---
+    st.subheader("Put/Call Ratio（未平倉口數）")
+    pcr_s = mkt["pcr_oi"].dropna()
+    if not pcr_s.empty:
+        ma20 = pcr_s.rolling(20).mean()
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(x=pcr_s.index, y=pcr_s, name="PCR OI",
+                                 line=dict(color="#a78bfa", width=1.5)))
+        fig.add_trace(go.Scatter(x=ma20.index, y=ma20, name="MA20",
+                                 line=dict(color="#f4a261", width=1.5, dash="dot")))
+        fig.add_hline(y=1.3, line_dash="dash", line_color="#d63333", line_width=1,
+                      annotation_text="偏空極端 1.3", annotation_position="right")
+        fig.add_hline(y=0.7, line_dash="dash", line_color="#1a9e5c", line_width=1,
+                      annotation_text="偏多極端 0.7", annotation_position="right")
+        _dark_layout(fig, 280)
+        st.plotly_chart(fig, use_container_width=True)
+
+    st.caption("TWSE 三大法人來源：twse.com.tw · TAIFEX 期貨/PCR：taifex.com.tw · 每交易日 18:00 後更新")
+
+
 def page_history(wl: dict):
     st.title("追蹤清單更新紀錄")
     history = wl.get("history", [])
@@ -338,16 +515,18 @@ def main():
 
     page = st.sidebar.radio(
         "選單",
-        ["總覽 Dashboard", "個股詳細", "更新紀錄"],
+        ["總覽 Dashboard", "個股詳細", "台灣大盤", "更新紀錄"],
         label_visibility="collapsed",
     )
     st.sidebar.divider()
-    st.sidebar.caption("資料來源：Yahoo Finance\nAI 分析：Claude Haiku")
+    st.sidebar.caption("資料來源：Yahoo Finance · TWSE · TAIFEX\nAI 分析：Claude Haiku")
 
     if page == "總覽 Dashboard":
         page_overview(wl)
     elif page == "個股詳細":
         page_detail(wl)
+    elif page == "台灣大盤":
+        page_taiwan()
     elif page == "更新紀錄":
         page_history(wl)
 
