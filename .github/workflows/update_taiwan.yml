@@ -19,7 +19,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests pandas lxml
+        run: pip install requests pandas lxml yfinance streamlit
 
       - name: Update Taiwan data
         run: python scripts/update_taiwan_daily.py
