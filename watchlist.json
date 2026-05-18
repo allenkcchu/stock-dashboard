@@ -39,6 +39,15 @@
       "TMUS",
       "VZ",
       "T"
+    ],
+    "Aerospace/Space": [
+      "RKLB"
+    ],
+    "Industrial/Conglomerate": [
+      "HON"
+    ],
+    "Semiconductors Support": [
+      "GLW"
     ]
   },
   "history": [
@@ -111,6 +120,25 @@
         "removed": {}
       },
       "reasoning": "本週新聞中AT&T、Verizon、T-Mobile成立衛星至手機合資企業應對SpaceX威脅，標誌著衛星通訊領域成為電信業重要戰場。此趨勢未在現有清單中充分體現，應新增衛星通訊類別。其他新聞多為Jim Cramer個股評論或市場情緒分析，缺乏對追蹤清單中AI晶片、資料中心、防務、核能等既有主題的重大衝擊。Cerebras IPO消息屬AI晶片領域強化跡象，與現有NVDA等持倉相符。CoreWeave相關討論則支持AI基礎設施持倉邏輯。消費者情緒下滑提醒關注防禦性配置，但無需對當前清單做出移除操作。"
+    },
+    {
+      "date": "2026-05-18",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Aerospace/Space": [
+            "RKLB"
+          ],
+          "Industrial/Conglomerate": [
+            "HON"
+          ],
+          "Semiconductors Support": [
+            "GLW"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞呈現三大新趨勢：(1) SpaceX IPO加速及太空產業升溫—現有清單缺乏公開上市的商業太空公司，應補充Rocket Lab (RKLB)；(2) 工業巨頭Honeywell擬分拆計畫有重大上升潛力，符合當前市場對產業重組的關注；(3) Corning因光學與半導體材料需求上漲獲分析師提價，為AI晶片供應鏈的關鍵支撐。AI晶片、資料中心、核能等現有主題新聞持續強勢（Nvidia財報、AMD成長、Oil波動），確認清單方向正確。未發現需移除之項目，現有持倉與防禦類股仍具防守價值。"
     }
   ]
 }
