@@ -48,6 +48,9 @@
     ],
     "Semiconductors Support": [
       "GLW"
+    ],
+    "Space/Satellite IPO": [
+      "SPACE"
     ]
   },
   "history": [
@@ -139,6 +142,19 @@
         "removed": {}
       },
       "reasoning": "本週新聞呈現三大新趨勢：(1) SpaceX IPO加速及太空產業升溫—現有清單缺乏公開上市的商業太空公司，應補充Rocket Lab (RKLB)；(2) 工業巨頭Honeywell擬分拆計畫有重大上升潛力，符合當前市場對產業重組的關注；(3) Corning因光學與半導體材料需求上漲獲分析師提價，為AI晶片供應鏈的關鍵支撐。AI晶片、資料中心、核能等現有主題新聞持續強勢（Nvidia財報、AMD成長、Oil波動），確認清單方向正確。未發現需移除之項目，現有持倉與防禦類股仍具防守價值。"
+    },
+    {
+      "date": "2026-05-21",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Space/Satellite IPO": [
+            "SPACE"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞顯示SpaceX即將上市（代碼預期為SPACE），且披露其100年商業計劃及Starlink的雄心壯志。多篇報導聚焦SpaceX IPO估值將超越Facebook IPO規模23倍，成為今年最重大科技IPO事件。考量清單已有航太領域(RKLB)，SpaceX上市後應納入追蹤以完善衛星通訊與太空經濟佈局。Nvidia盤後下跌後反彈、半導體存儲股(Seagate、Western Digital)回升等技術面消息與既有AI晶片與基礎設施主題相符，無需調整。油價上升、美元升值、房貸利率跳升等宏觀因素暫無直接衝擊清單中持倉的明確證據，保守原則下暫不調整既有持倉。"
     }
   ]
 }
