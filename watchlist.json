@@ -51,6 +51,13 @@
     ],
     "Space/Satellite IPO": [
       "SPACE"
+    ],
+    "Quantum Computing": [
+      "RGTI",
+      "QBTS"
+    ],
+    "Nuclear Energy Expansion": [
+      "TE"
     ]
   },
   "history": [
@@ -155,6 +162,23 @@
         "removed": {}
       },
       "reasoning": "本週新聞顯示SpaceX即將上市（代碼預期為SPACE），且披露其100年商業計劃及Starlink的雄心壯志。多篇報導聚焦SpaceX IPO估值將超越Facebook IPO規模23倍，成為今年最重大科技IPO事件。考量清單已有航太領域(RKLB)，SpaceX上市後應納入追蹤以完善衛星通訊與太空經濟佈局。Nvidia盤後下跌後反彈、半導體存儲股(Seagate、Western Digital)回升等技術面消息與既有AI晶片與基礎設施主題相符，無需調整。油價上升、美元升值、房貸利率跳升等宏觀因素暫無直接衝擊清單中持倉的明確證據，保守原則下暫不調整既有持倉。"
+    },
+    {
+      "date": "2026-05-25",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Quantum Computing": [
+            "RGTI",
+            "QBTS"
+          ],
+          "Nuclear Energy Expansion": [
+            "TE"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞顯示量子計算領域出現重大政府資金支持，Rigetti (RGTI) 獲得$100M政府資助上漲48%，D-Wave (QBTS) 獲政府支持上漲44%，此趨勢與AI晶片、AI基礎設施主題相輔相成，應新增量子計算追蹤。另外，T1 Energy (TE) 因小型模組化核反應爐(SMR)商業化機會上漲42%，與現有Nuclear Energy類別共鳴，但專注新興核能技術，值得獨立追蹤。Arm Holdings (ARM) 雖上漲46%，但其為上游設計公司，已被AI Chips類別覆蓋。能源類新聞(COP、EOG、CNQ)反映油價波動與地緣政治影響，屬商品週期性波動，暫不納入科技/防禦導向的追蹤清單。消費類新聞(Lowe's、Walmart、FLO)與現有清單主題無關。"
     }
   ]
 }
