@@ -58,6 +58,11 @@
     ],
     "Nuclear Energy Expansion": [
       "TE"
+    ],
+    "Solar/Renewable Energy": [
+      "SUNRUN",
+      "ENPHASE",
+      "NEXTRACKER"
     ]
   },
   "history": [
@@ -179,6 +184,21 @@
         "removed": {}
       },
       "reasoning": "本週新聞顯示量子計算領域出現重大政府資金支持，Rigetti (RGTI) 獲得$100M政府資助上漲48%，D-Wave (QBTS) 獲政府支持上漲44%，此趨勢與AI晶片、AI基礎設施主題相輔相成，應新增量子計算追蹤。另外，T1 Energy (TE) 因小型模組化核反應爐(SMR)商業化機會上漲42%，與現有Nuclear Energy類別共鳴，但專注新興核能技術，值得獨立追蹤。Arm Holdings (ARM) 雖上漲46%，但其為上游設計公司，已被AI Chips類別覆蓋。能源類新聞(COP、EOG、CNQ)反映油價波動與地緣政治影響，屬商品週期性波動，暫不納入科技/防禦導向的追蹤清單。消費類新聞(Lowe's、Walmart、FLO)與現有清單主題無關。"
+    },
+    {
+      "date": "2026-05-28",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Solar/Renewable Energy": [
+            "SUNRUN",
+            "ENPHASE",
+            "NEXTRACKER"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞多處強調AI驅動能源需求激增的趨勢。『Solar Stocks To Watch As AI Drives Energy Demand』明確指出太陽能股票因AI電力需求而受關注；『The Best Nuclear Energy Stocks to Buy and Hold for Decades』與『Caterpillar Rallies 59% Amid AI Trade Boost』進一步確認基礎設施與清潔能源的投資機會。現有清單已涵蓋核能（CEG、GEV、BWXT、TE）和數據中心基礎設施，但缺乏太陽能/可再生能源曝露。鑑於AI資料中心的電力需求預計將推動太陽能與儲能解決方案需求增長，建議新增太陽能相關股票以完善能源結構。其他現有主題（AI晶片、國防、航太、核能、衛星通訊）在新聞中持續獲得正面支持，無需移除任何標的。"
     }
   ]
 }
