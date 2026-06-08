@@ -54,7 +54,8 @@
     ],
     "Quantum Computing": [
       "RGTI",
-      "QBTS"
+      "QBTS",
+      "IONQ"
     ],
     "Nuclear Energy Expansion": [
       "TE"
@@ -66,6 +67,9 @@
     ],
     "Nuclear Energy IPO": [
       "XLE"
+    ],
+    "RF/Wireless Semiconductors": [
+      "WOLF"
     ]
   },
   "history": [
@@ -228,6 +232,22 @@
         "removed": {}
       },
       "reasoning": "本週新聞確認三大重要趨勢：1) Quantinuum周四上市交易，量子計算股票持續受關注，現有QBTS和RGTI應維持追蹤；2) Amazon支持的X-Energy核能IPO上市但表現承壓，標誌核能產業進入IPO階段，與現有核能清單策略相符；3) CPU需求因代理AI快速上升，AMD獲得分析師調漲目標價至$665，強化現有AI晶片清單的相關性；4) Anthropic IPO申請與Micron被評為最佳AI基礎設施股票，進一步確認現有AI基礎設施和晶片清單的正確性。新聞未見現有追蹤股票的明確利空或趨勢反轉證據。建議密切關注量子計算和核能IPO活動，但保守原則下暫不作大幅調整，現有清單結構完整且與市場焦點相符。"
+    },
+    {
+      "date": "2026-06-08",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Quantum Computing": [
+            "IONQ"
+          ],
+          "RF/Wireless Semiconductors": [
+            "WOLF"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞顯示量子計算領域動態活躍，IonQ(IONQ)股價反彈且市場關注度高，應納入現有Quantum Computing類別追蹤。Wolfspeed(WOLF)於數據中心市場擴張並設立專責團隊，展現在RF/無線半導體領域的競爭力，與晶片股反彈趨勢相符，建議新增RF/Wireless Semiconductors類別。Micron(MU)短期波動雖大但屬正常市場調整，基本面支撐未改變，暫不移除。現有清單中AI晶片、數據中心、能源基礎設施等主題仍為新聞焦點，清單結構與市場趨勢保持良好對應。"
     }
   ]
 }
