@@ -70,6 +70,9 @@
     ],
     "RF/Wireless Semiconductors": [
       "WOLF"
+    ],
+    "Space Industry": [
+      "SPACE"
     ]
   },
   "history": [
@@ -248,6 +251,19 @@
         "removed": {}
       },
       "reasoning": "本週新聞顯示量子計算領域動態活躍，IonQ(IONQ)股價反彈且市場關注度高，應納入現有Quantum Computing類別追蹤。Wolfspeed(WOLF)於數據中心市場擴張並設立專責團隊，展現在RF/無線半導體領域的競爭力，與晶片股反彈趨勢相符，建議新增RF/Wireless Semiconductors類別。Micron(MU)短期波動雖大但屬正常市場調整，基本面支撐未改變，暫不移除。現有清單中AI晶片、數據中心、能源基礎設施等主題仍為新聞焦點，清單結構與市場趨勢保持良好對應。"
+    },
+    {
+      "date": "2026-06-11",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Space Industry": [
+            "SPACE"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞中SpaceX IPO成為市場焦點，多家機構（Oppenheimer、BlackRock等）積極參與，反映出太空產業的強勁需求。建議將SPACE從「Space/Satellite IPO」獨立分類提升為「Space Industry」主類別，與「Aerospace/Space」（RKLB）並列，強化太空經濟投資配置。此外，Intel因CPU與晶圓代工前景改善獲雙升評級，符合既有「AI Chips」主題無需調整。清單中的能源、防務、半導體等核心持倉仍與當前市場熱點相符，無需移除。"
     }
   ]
 }
