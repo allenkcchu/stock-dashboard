@@ -73,6 +73,9 @@
     ],
     "Space Industry": [
       "SPACE"
+    ],
+    "Space/Commercial IPO": [
+      "SPACEX"
     ]
   },
   "history": [
@@ -264,6 +267,19 @@
         "removed": {}
       },
       "reasoning": "本週新聞中SpaceX IPO成為市場焦點，多家機構（Oppenheimer、BlackRock等）積極參與，反映出太空產業的強勁需求。建議將SPACE從「Space/Satellite IPO」獨立分類提升為「Space Industry」主類別，與「Aerospace/Space」（RKLB）並列，強化太空經濟投資配置。此外，Intel因CPU與晶圓代工前景改善獲雙升評級，符合既有「AI Chips」主題無需調整。清單中的能源、防務、半導體等核心持倉仍與當前市場熱點相符，無需移除。"
+    },
+    {
+      "date": "2026-06-15",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Space/Commercial IPO": [
+            "SPACEX"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞中SpaceX IPO成為市場焦點，多篇報導涵蓋其IPO規模、投資機會與市場影響力，被稱為華爾街關注的「10分滿分」事件。鑑於清單已涵蓋衛星通訊(TMUS、VZ、T)與太空產業(RKLB、SPACE)，建議新增「Space/Commercial IPO」類別追蹤SpaceX，以完整捕捉商業太空產業的頂級參與者。其他新聞(能源、消費股估值、日銀政策等)均為現有類別的延伸或技術性調整，無新增趨勢；MU獲分析師調升目標價亦符合現有AI晶片追蹤。清單整體結構完整，主要調整為補強太空商業化浪潮的代表企業。"
     }
   ]
 }
