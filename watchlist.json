@@ -9,7 +9,6 @@
       "NVDA",
       "AMD",
       "AVGO",
-      "MU",
       "INTC"
     ],
     "Data Center": [
@@ -84,6 +83,21 @@
       "PLUG",
       "FCEL",
       "HYLN"
+    ],
+    "Real Estate/Interest Rate Sensitive": [
+      "EQR",
+      "INVH",
+      "AMH",
+      "SUI",
+      "HST",
+      "CUZ",
+      "AVB"
+    ],
+    "Hospitality": [
+      "RHP"
+    ],
+    "Commercial Real Estate": [
+      "BXP"
     ]
   },
   "history": [
@@ -325,6 +339,35 @@
         "removed": {}
       },
       "reasoning": "本週新聞顯示多項重要趨勢：(1) SpaceX計畫部署數百萬顆AI衛星，強化CRWV與SPACE的戰略地位，現有清單已覆蓋；(2) NVDA預測2027年AI基礎設施需求達1兆美元，芯片與數據中心板塊保持強勢；(3) Micron等記憶體廠商因AI需求創新高，MU已在清單；(4) 新增重要趨勢：AI數據中心業興隆推動燃料電池市場至2030年達300億美元規模，建議新增燃料電池類股PLUG、FCEL、HYLN以補充能源基礎設施生態鏈；(5) 政策面：PCE通膨升至3年高點引發升息預期，對利率敏感股有壓力，但不足以移除現有持股。保守評估：無需移除現有標的，僅需補強燃料電池新興機會。"
+    },
+    {
+      "date": "2026-06-29",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Real Estate/Interest Rate Sensitive": [
+            "EQR",
+            "INVH",
+            "AMH",
+            "SUI",
+            "HST",
+            "CUZ",
+            "AVB"
+          ],
+          "Hospitality": [
+            "RHP"
+          ],
+          "Commercial Real Estate": [
+            "BXP"
+          ]
+        },
+        "removed": {
+          "AI Chips": [
+            "MU"
+          ]
+        }
+      },
+      "reasoning": "本週新聞顯示三大重要趨勢變化：(1)房地產和利率敏感股票成為市場焦點，多家券商上調評等（Truist、Wells Fargo、BMO Capital、Scotiabank等），建議新增『房地產/利率敏感』類別追蹤；(2)飯店和商業房地產表現突出，Ryman Hospitality評估新合作機會；(3)Micron因記憶晶片價格壓力而下跌，市場關注其定價爭議，短期風險增加，建議暫時移出AI晶片清單。(4)Google加入道瓊指數替代Verizon，確認科技龍頭地位。現有清單中防務、太空、核能、AI基礎設施等主題仍為長期趨勢，保持不變。"
     }
   ]
 }
