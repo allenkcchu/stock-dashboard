@@ -98,6 +98,12 @@
     ],
     "Commercial Real Estate": [
       "BXP"
+    ],
+    "AI Data Centers & Infrastructure": [
+      "EVTL"
+    ],
+    "Gaming/Entertainment": [
+      "TTWO"
     ]
   },
   "history": [
@@ -368,6 +374,22 @@
         }
       },
       "reasoning": "本週新聞顯示三大重要趨勢變化：(1)房地產和利率敏感股票成為市場焦點，多家券商上調評等（Truist、Wells Fargo、BMO Capital、Scotiabank等），建議新增『房地產/利率敏感』類別追蹤；(2)飯店和商業房地產表現突出，Ryman Hospitality評估新合作機會；(3)Micron因記憶晶片價格壓力而下跌，市場關注其定價爭議，短期風險增加，建議暫時移出AI晶片清單。(4)Google加入道瓊指數替代Verizon，確認科技龍頭地位。現有清單中防務、太空、核能、AI基礎設施等主題仍為長期趨勢，保持不變。"
+    },
+    {
+      "date": "2026-07-02",
+      "action": "update",
+      "changes": {
+        "added": {
+          "AI Data Centers & Infrastructure": [
+            "EVTL"
+          ],
+          "Gaming/Entertainment": [
+            "TTWO"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞反映以下重要趨勢：(1) AI數據中心持續火熱，新聞明確提及「AI Data Center Leader Everus Construction」的強勁表現，建議新增EVTL至清單，補強現有數據中心持倉的覆蓋；(2) AI晶片與基礎設施仍為主流，Applied Materials、Marvell等廠商因AI基礎設施需求受惠，現有清單配置適切；(3) 新聞出現「'Grand Theft Auto 6'銷售強勁」和「Netflix重回基本面」等娛樂內容提示，建議新增遊戲/娛樂類別並納入TTWO，多元化科技投資組合；(4) 航太/太空主題（SpaceX、AST SpaceMobile等）仍受關注但現有清單已涵蓋；(5) 量子計算、核能等未見明確新聞支撐，維持現狀。整體而言，現有清單對AI晶片、能源、防務等核心趨勢的配置穩健，微幅調整以強化數據中心與消費娛樂的均衡。"
     }
   ]
 }
