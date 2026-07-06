@@ -104,6 +104,9 @@
     ],
     "Gaming/Entertainment": [
       "TTWO"
+    ],
+    "AI Data Center Infrastructure": [
+      "TERAWULF"
     ]
   },
   "history": [
@@ -390,6 +393,19 @@
         "removed": {}
       },
       "reasoning": "本週新聞反映以下重要趨勢：(1) AI數據中心持續火熱，新聞明確提及「AI Data Center Leader Everus Construction」的強勁表現，建議新增EVTL至清單，補強現有數據中心持倉的覆蓋；(2) AI晶片與基礎設施仍為主流，Applied Materials、Marvell等廠商因AI基礎設施需求受惠，現有清單配置適切；(3) 新聞出現「'Grand Theft Auto 6'銷售強勁」和「Netflix重回基本面」等娛樂內容提示，建議新增遊戲/娛樂類別並納入TTWO，多元化科技投資組合；(4) 航太/太空主題（SpaceX、AST SpaceMobile等）仍受關注但現有清單已涵蓋；(5) 量子計算、核能等未見明確新聞支撐，維持現狀。整體而言，現有清單對AI晶片、能源、防務等核心趨勢的配置穩健，微幅調整以強化數據中心與消費娛樂的均衡。"
+    },
+    {
+      "date": "2026-07-06",
+      "action": "update",
+      "changes": {
+        "added": {
+          "AI Data Center Infrastructure": [
+            "TERAWULF"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞重點包括：(1) TeraWulf與Anthropic簽署$19B數據中心租賃協議，成為本週最重要的AI基礎設施交易，彰顯核電驅動AI數據中心的戰略地位；(2) 科技股持續流入創紀錄，AI產業投資熱度未減；(3) 微軟裁員與Xbox重組為個別公司事項，未改變產業大趨勢。建議新增TeraWulf至「AI Data Center Infrastructure」分類，該公司作為核電動力的AI數據中心運營商，與現有追蹤的核能與AI基礎設施主題高度契合。現有「AI Infrastructure」、「Nuclear Energy」、「AI Data Centers & Infrastructure」等分類已涵蓋相關概念，但TeraWulf作為實現這些趨勢的具體標的，應納入清單。其他新聞內容（金融科技風險、房貸利率、能源價格等）未顯示對現有追蹤清單產生調整必要的新趨勢。"
     }
   ]
 }
