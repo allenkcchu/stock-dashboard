@@ -9,7 +9,8 @@
       "NVDA",
       "AMD",
       "AVGO",
-      "INTC"
+      "INTC",
+      "AVEO"
     ],
     "Data Center": [
       "VRT",
@@ -107,6 +108,9 @@
     ],
     "AI Data Center Infrastructure": [
       "TERAWULF"
+    ],
+    "Data Center/AI Infrastructure": [
+      "MARA"
     ]
   },
   "history": [
@@ -406,6 +410,22 @@
         "removed": {}
       },
       "reasoning": "本週新聞重點包括：(1) TeraWulf與Anthropic簽署$19B數據中心租賃協議，成為本週最重要的AI基礎設施交易，彰顯核電驅動AI數據中心的戰略地位；(2) 科技股持續流入創紀錄，AI產業投資熱度未減；(3) 微軟裁員與Xbox重組為個別公司事項，未改變產業大趨勢。建議新增TeraWulf至「AI Data Center Infrastructure」分類，該公司作為核電動力的AI數據中心運營商，與現有追蹤的核能與AI基礎設施主題高度契合。現有「AI Infrastructure」、「Nuclear Energy」、「AI Data Centers & Infrastructure」等分類已涵蓋相關概念，但TeraWulf作為實現這些趨勢的具體標的，應納入清單。其他新聞內容（金融科技風險、房貸利率、能源價格等）未顯示對現有追蹤清單產生調整必要的新趨勢。"
+    },
+    {
+      "date": "2026-07-09",
+      "action": "update",
+      "changes": {
+        "added": {
+          "AI Chips": [
+            "AVEO"
+          ],
+          "Data Center/AI Infrastructure": [
+            "MARA"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞確認多個既有主題持續強勁：AI基礎設施(Oracle、OpenAI、SpaceX AI模型)、衛星通訊(SpaceX Starlink里程碑)、能源(Bloom Energy反彈)、防務(Honeywell航太)等均有正面進展。建議新增MARA至Data Center主題，因新聞明確提及其數據中心發展計畫推動比特幣相關動能。Meta AI晶片進展雖提及但目前證據不足新增個股。整體而言，現有清單涵蓋範圍完整，本週無需移除股票，市場焦點仍集中在AI、能源、防務等既追蹤領域，保持審慎原則，僅在明確證據支持下進行微調。"
     }
   ]
 }
