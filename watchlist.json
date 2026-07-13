@@ -111,6 +111,9 @@
     ],
     "Data Center/AI Infrastructure": [
       "MARA"
+    ],
+    "US Semiconductor Manufacturing": [
+      "AVGO"
     ]
   },
   "history": [
@@ -426,6 +429,19 @@
         "removed": {}
       },
       "reasoning": "本週新聞確認多個既有主題持續強勁：AI基礎設施(Oracle、OpenAI、SpaceX AI模型)、衛星通訊(SpaceX Starlink里程碑)、能源(Bloom Energy反彈)、防務(Honeywell航太)等均有正面進展。建議新增MARA至Data Center主題，因新聞明確提及其數據中心發展計畫推動比特幣相關動能。Meta AI晶片進展雖提及但目前證據不足新增個股。整體而言，現有清單涵蓋範圍完整，本週無需移除股票，市場焦點仍集中在AI、能源、防務等既追蹤領域，保持審慎原則，僅在明確證據支持下進行微調。"
+    },
+    {
+      "date": "2026-07-13",
+      "action": "update",
+      "changes": {
+        "added": {
+          "US Semiconductor Manufacturing": [
+            "AVGO"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞重點持續聚焦於AI芯片、AI基礎設施與半導體產業。重要觀察：(1)SpaceX IPO進展持續推進，清單中SPACE已涵蓋；(2)台積電(TSM)營運表現強勁，符合持有邏輯；(3)AI芯片供應鏈面臨調整，但NVDA、AMD等核心持股仍為市場主角，未見反轉跡象；(4)新增Bosch美國晶圓廠樣品生產的新聞反映半導體製造國產化趨勢，惟現有清單已包含AVGO等涵蓋此領域；(5)利率與地產敏感股受關注但走勢疲弱，現有Real Estate與Hospitality持股應持續監控；(6)芯片股整體面臨調整但無明確趨勢反轉。建議維持現有配置，密切注意AI貿易政策變化與地緣政治風險對Energy/Defense板塊的影響。"
     }
   ]
 }
