@@ -114,6 +114,15 @@
     ],
     "US Semiconductor Manufacturing": [
       "AVGO"
+    ],
+    "Healthcare/Pharmaceutical": [
+      "ABT",
+      "UNH",
+      "MCK"
+    ],
+    "Memory Semiconductors": [
+      "MU",
+      "STX"
     ]
   },
   "history": [
@@ -442,6 +451,25 @@
         "removed": {}
       },
       "reasoning": "本週新聞重點持續聚焦於AI芯片、AI基礎設施與半導體產業。重要觀察：(1)SpaceX IPO進展持續推進，清單中SPACE已涵蓋；(2)台積電(TSM)營運表現強勁，符合持有邏輯；(3)AI芯片供應鏈面臨調整，但NVDA、AMD等核心持股仍為市場主角，未見反轉跡象；(4)新增Bosch美國晶圓廠樣品生產的新聞反映半導體製造國產化趨勢，惟現有清單已包含AVGO等涵蓋此領域；(5)利率與地產敏感股受關注但走勢疲弱，現有Real Estate與Hospitality持股應持續監控；(6)芯片股整體面臨調整但無明確趨勢反轉。建議維持現有配置，密切注意AI貿易政策變化與地緣政治風險對Energy/Defense板塊的影響。"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Healthcare/Pharmaceutical": [
+            "ABT",
+            "UNH",
+            "MCK"
+          ],
+          "Memory Semiconductors": [
+            "MU",
+            "STX"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞揭示三大重要趨勢：(1)AI晶片需求持續強勁，TSM、MU等廠商因AI基礎設施建設獲益，清單已涵蓋，無需調整；(2)醫療健康板塊表現強勢，Abbott上漲14%創三月高點、UnitedHealth強勁復甦、McKesson業績調整，此板塊機會明顯但清單缺失，應新增Healthcare/Pharmaceutical類別；(3)記憶體晶片(DRAM/NAND)於AI基礎設施中角色關鍵，Micron在AI基礎設施重要性獲強調，Seagate執行力優異，此類應補充。整體而言，現有清單對AI晶片、能源、防務等科技主題覆蓋完整，惟醫療健康與記憶體晶片支援生態應納入以完善投資組合配置。"
     }
   ]
 }
