@@ -123,6 +123,14 @@
     "Memory Semiconductors": [
       "MU",
       "STX"
+    ],
+    "Geopolitical Risk/Precious Metals": [
+      "GLD",
+      "SLV"
+    ],
+    "Cryptocurrency": [
+      "BTC",
+      "ETH"
     ]
   },
   "history": [
@@ -470,6 +478,24 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示三大重要趨勢：(1)AI晶片需求持續強勁，TSM、MU等廠商因AI基礎設施建設獲益，清單已涵蓋，無需調整；(2)醫療健康板塊表現強勢，Abbott上漲14%創三月高點、UnitedHealth強勁復甦、McKesson業績調整，此板塊機會明顯但清單缺失，應新增Healthcare/Pharmaceutical類別；(3)記憶體晶片(DRAM/NAND)於AI基礎設施中角色關鍵，Micron在AI基礎設施重要性獲強調，Seagate執行力優異，此類應補充。整體而言，現有清單對AI晶片、能源、防務等科技主題覆蓋完整，惟醫療健康與記憶體晶片支援生態應納入以完善投資組合配置。"
+    },
+    {
+      "date": "2026-07-20",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Geopolitical Risk/Precious Metals": [
+            "GLD",
+            "SLV"
+          ],
+          "Cryptocurrency": [
+            "BTC",
+            "ETH"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞揭示三大重要趨勢：(1) 中東地緣政治衝突升溫，黃金與白銀價格受支撐，美元走強，建議新增貴金屬相關ETF以對沖風險；(2) 加密貨幣市場活躍度提升，比特幣與以太坊動向成為市場焦點，應納入追蹤；(3) 晶片股反彈強勁（AMD、美光領漲），現有AI晶片與記憶體半導體清單持續有效。此外，特斯拉機器人業務（Robotaxi/Optimus）受關注但現有清單未涵蓋，惟相關概念股尚未形成明確投資信號，保守起見暫不新增。現有國防、能源、資料中心等主題仍符合市場趨勢，無移除必要。建議重點關注地緣政治對能源與防禦類股的支撐作用。"
     }
   ]
 }
