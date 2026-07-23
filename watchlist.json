@@ -131,6 +131,22 @@
     "Cryptocurrency": [
       "BTC",
       "ETH"
+    ],
+    "Payment Processing": [
+      "MA",
+      "V"
+    ],
+    "Enterprise Software": [
+      "CRM"
+    ],
+    "Semiconductors - Broader": [
+      "STM"
+    ],
+    "Financial Services": [
+      "SCHW"
+    ],
+    "Copper/Materials": [
+      "FCX"
     ]
   },
   "history": [
@@ -496,6 +512,32 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示三大重要趨勢：(1) 中東地緣政治衝突升溫，黃金與白銀價格受支撐，美元走強，建議新增貴金屬相關ETF以對沖風險；(2) 加密貨幣市場活躍度提升，比特幣與以太坊動向成為市場焦點，應納入追蹤；(3) 晶片股反彈強勁（AMD、美光領漲），現有AI晶片與記憶體半導體清單持續有效。此外，特斯拉機器人業務（Robotaxi/Optimus）受關注但現有清單未涵蓋，惟相關概念股尚未形成明確投資信號，保守起見暫不新增。現有國防、能源、資料中心等主題仍符合市場趨勢，無移除必要。建議重點關注地緣政治對能源與防禦類股的支撐作用。"
+    },
+    {
+      "date": "2026-07-23",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Payment Processing": [
+            "MA",
+            "V"
+          ],
+          "Enterprise Software": [
+            "CRM"
+          ],
+          "Semiconductors - Broader": [
+            "STM"
+          ],
+          "Financial Services": [
+            "SCHW"
+          ],
+          "Copper/Materials": [
+            "FCX"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞顯示多個產業動向：(1)防務領域持續強勢，LMT與RTX財報超預期，支持現有防務持倉；(2)科技股承壓，但市場聚焦Google資本支出與AI基礎設施投資疑慮，對NVDA、AMD、半導體類股構成短期壓力，惟無移除理由；(3)支付處理公司(Mastercard、Visa)與企業軟體(Salesforce)展現機會，應納入成長性科技組合；(4)STMicroelectronics財報預警Q3疲軟，應納入監控；(5)銅價下滑導致FCX下跌，反映大宗商品風險，宜補充追蹤；(6)房地產敏感股票面臨利率環境變化但仍列清單；(7)黃金/白銀維持避險特性，與地緣政治風險相符。整體而言，清單對AI基礎設施、防務、核能等主題覆蓋完整，但支付與企業軟體曝險不足，應補強。"
     }
   ]
 }
