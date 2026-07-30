@@ -153,6 +153,15 @@
     ],
     "Critical Materials/Supply Chain": [
       "ALGM"
+    ],
+    "Custom Silicon Chips": [
+      "TER",
+      "MRVL",
+      "MTSI"
+    ],
+    "Cloud Infrastructure Spending": [
+      "CRWV",
+      "NBIS"
     ]
   },
   "history": [
@@ -560,6 +569,25 @@
         "removed": {}
       },
       "reasoning": "本週新聞呈現三大重要趨勢：(1) 記憶體半導體強勢——SanDisk積壓單據、MKS因HBM需求激增獲利，應新增MKSI至記憶體相關追蹤；(2) AMD與NVDA持續領跑芯片產業，邊際安全性未見利空；(3) 地緣政治風險浮現——五角大廈警告稀有磁石產能2027年將短缺，Allegro Microsystems (ALGM)因軍工供應鏈需求增長而受關注，應納入關鍵材料供應鏈類別；(4) 量子計算回溫——D-Wave領漲，現有QBTS、IONQ、RGTI等持股依然有效；(5) 大型科技股估值分化——Apple超越Nvidia成最高市值公司，但清單已涵蓋兩者；(6) 油價與伊朗局勢緩和對能源股短期負面但為戰術調整非趨勢反轉。整體而言，現有清單覆蓋度佳，僅需補強記憶體與關鍵材料兩個新興動能點。"
+    },
+    {
+      "date": "2026-07-30",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Custom Silicon Chips": [
+            "TER",
+            "MRVL",
+            "MTSI"
+          ],
+          "Cloud Infrastructure Spending": [
+            "CRWV",
+            "NBIS"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞呈現三大重要趨勢：(1)AI晶片需求延伸至客製化矽晶片領域，Teradyne(TER)、Marvell Technology(MRVL)和MACOM(MTSI)因高成長市場需求強勁而受關注，此趨勢應獨立追蹤；(2)Meta與CoreWeave(CRWV)、Nebius(NBIS)的620億美元雲基礎設施合作凸顯AI資料中心投資加速，CRWV已在清單中但Nebius(NBIS)為新興重點；(3)記憶體晶片(Micron)因Samsung警告觸發反彈，現有清單已涵蓋；(4)Nvidia、Microsoft、Amazon雲端競爭激化及Fed降息預期提升市場情緒。現有清單對AI晶片、資料中心、半導體支援等主題覆蓋完整，無需移除，但應新增「客製化矽晶片」類別以捕捉此新趨勢，並補充Nebius至「AI基礎設施」類別。"
     }
   ]
 }
