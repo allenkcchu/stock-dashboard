@@ -162,6 +162,17 @@
     "Cloud Infrastructure Spending": [
       "CRWV",
       "NBIS"
+    ],
+    "Quantum Computing & Hardware": [
+      "HRL"
+    ],
+    "Cloud Infrastructure/Hyperscalers": [
+      "AMZN",
+      "MSFT",
+      "ORCL"
+    ],
+    "Radiopharma/Biotech M&A": [
+      "CUIUM"
     ]
   },
   "history": [
@@ -588,6 +599,27 @@
         "removed": {}
       },
       "reasoning": "本週新聞呈現三大重要趨勢：(1)AI晶片需求延伸至客製化矽晶片領域，Teradyne(TER)、Marvell Technology(MRVL)和MACOM(MTSI)因高成長市場需求強勁而受關注，此趨勢應獨立追蹤；(2)Meta與CoreWeave(CRWV)、Nebius(NBIS)的620億美元雲基礎設施合作凸顯AI資料中心投資加速，CRWV已在清單中但Nebius(NBIS)為新興重點；(3)記憶體晶片(Micron)因Samsung警告觸發反彈，現有清單已涵蓋；(4)Nvidia、Microsoft、Amazon雲端競爭激化及Fed降息預期提升市場情緒。現有清單對AI晶片、資料中心、半導體支援等主題覆蓋完整，無需移除，但應新增「客製化矽晶片」類別以捕捉此新趨勢，並補充Nebius至「AI基礎設施」類別。"
+    },
+    {
+      "date": "2026-08-03",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Quantum Computing & Hardware": [
+            "HRL"
+          ],
+          "Cloud Infrastructure/Hyperscalers": [
+            "AMZN",
+            "MSFT",
+            "ORCL"
+          ],
+          "Radiopharma/Biotech M&A": [
+            "CUIUM"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞揭示三大新興趨勢值得追蹤：1) IBM量子計算業務擴展（HRL收購），強化現有量子計算部位；2) 雲端超大規模廠商AI資本支出激增（Amazon $220B+、Microsoft、Oracle均為主角），此為AI基礎設施核心驅動力，需補充AMZN、MSFT、ORCL以完整覆蓋雲端層；3) 放射性藥物併購潮（Curium-Lantheus $8B交易），新興生技細分領域。AstraZeneca合併傳聞屬個案事件，無需調整。Broadcom歐盟訴訟與中國半導體競爭為既知風險，現有清單已涵蓋。Warren Buffett ETF推薦（SGOV已在追蹤）與整體市場反彈無需變動。保守原則下，僅對明確的新增長引擎（雲端超級資本支出、量子硬體商業化）進行補充。"
     }
   ]
 }
