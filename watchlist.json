@@ -173,6 +173,16 @@
     ],
     "Radiopharma/Biotech M&A": [
       "CUIUM"
+    ],
+    "AI Memory/Storage Solutions": [
+      "STX"
+    ],
+    "AI Software/Platform": [
+      "PANW",
+      "PLTR"
+    ],
+    "AI Hardware/Processors": [
+      "CBRS"
     ]
   },
   "history": [
@@ -620,6 +630,26 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示三大新興趨勢值得追蹤：1) IBM量子計算業務擴展（HRL收購），強化現有量子計算部位；2) 雲端超大規模廠商AI資本支出激增（Amazon $220B+、Microsoft、Oracle均為主角），此為AI基礎設施核心驅動力，需補充AMZN、MSFT、ORCL以完整覆蓋雲端層；3) 放射性藥物併購潮（Curium-Lantheus $8B交易），新興生技細分領域。AstraZeneca合併傳聞屬個案事件，無需調整。Broadcom歐盟訴訟與中國半導體競爭為既知風險，現有清單已涵蓋。Warren Buffett ETF推薦（SGOV已在追蹤）與整體市場反彈無需變動。保守原則下，僅對明確的新增長引擎（雲端超級資本支出、量子硬體商業化）進行補充。"
+    },
+    {
+      "date": "2026-08-10",
+      "action": "update",
+      "changes": {
+        "added": {
+          "AI Memory/Storage Solutions": [
+            "STX"
+          ],
+          "AI Software/Platform": [
+            "PANW",
+            "PLTR"
+          ],
+          "AI Hardware/Processors": [
+            "CBRS"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞確認多項既有趨勢持續強化：(1) AI晶片需求持續強勁——TSM銷售成長45%、NVDA周漲12%，驗證AI Chips分類的核心地位；(2) AI記憶體/存儲解決方案浮現——Seagate (STX)因存儲價格上漲持續上升，SanDisk在AI記憶體的角色凸顯，建議新增「AI Memory/Storage Solutions」分類追蹤STX；(3) AI軟體平台需求升溫——Palo Alto Networks (PANW)因AI採用驅動需求、Palantir (PLTR)將AI需求轉化為獲利成長，建議新增「AI Software/Platform」分類；(4) AI專用晶片新興廠商——Cerebras Systems (CBRS)作為看漲選擇出現，可新增至「AI Hardware/Processors」分類；(5) SpaceX IPO後持續表現強勢、量子計算、核能、防衛等主題仍保持市場關注，現有清單布局完整。未發現明確趨勢反轉或利空需移除的股票。建議新增上述三個子分類以完善AI生態系統追蹤。"
     }
   ]
 }
