@@ -183,6 +183,18 @@
     ],
     "AI Hardware/Processors": [
       "CBRS"
+    ],
+    "Semiconductor Equipment": [
+      "KLAC"
+    ],
+    "Cybersecurity/AI Security": [
+      "CRWD"
+    ],
+    "Healthcare Services": [
+      "MOH"
+    ],
+    "Aerospace Defense Support": [
+      "DCO"
     ]
   },
   "history": [
@@ -650,6 +662,28 @@
         "removed": {}
       },
       "reasoning": "本週新聞確認多項既有趨勢持續強化：(1) AI晶片需求持續強勁——TSM銷售成長45%、NVDA周漲12%，驗證AI Chips分類的核心地位；(2) AI記憶體/存儲解決方案浮現——Seagate (STX)因存儲價格上漲持續上升，SanDisk在AI記憶體的角色凸顯，建議新增「AI Memory/Storage Solutions」分類追蹤STX；(3) AI軟體平台需求升溫——Palo Alto Networks (PANW)因AI採用驅動需求、Palantir (PLTR)將AI需求轉化為獲利成長，建議新增「AI Software/Platform」分類；(4) AI專用晶片新興廠商——Cerebras Systems (CBRS)作為看漲選擇出現，可新增至「AI Hardware/Processors」分類；(5) SpaceX IPO後持續表現強勢、量子計算、核能、防衛等主題仍保持市場關注，現有清單布局完整。未發現明確趨勢反轉或利空需移除的股票。建議新增上述三個子分類以完善AI生態系統追蹤。"
+    },
+    {
+      "date": "2026-08-13",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Semiconductor Equipment": [
+            "KLAC"
+          ],
+          "Cybersecurity/AI Security": [
+            "CRWD"
+          ],
+          "Healthcare Services": [
+            "MOH"
+          ],
+          "Aerospace Defense Support": [
+            "DCO"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞揭示四個值得關注的新動向：(1)半導體設備廠商KLAC因晶片複雜度提升而受惠，應補充到清單；(2)CrowdStrike因自主AI代理主流化而上升，反映AI網路安全新趨勢，應在現有PANW基礎上補充；(3)Molina Healthcare因醫療保險政策澄清而大漲，反映醫療服務股價值回歸；(4)Ducommun作為航太防禦供應商，在THAAD飛彈防禦需求激增背景下受惠。同時，新聞確認現有重點股票基本面完整：Nvidia、AMD等AI晶片龍頭仍為焦點，LMT與NOC防禦投資持續強勁，MU在AI基礎設施中角色核心。無明確利空導致現有股票應被移除，保守原則下僅補充有具體新聞支撐之標的。"
     }
   ]
 }
