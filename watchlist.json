@@ -195,6 +195,12 @@
     ],
     "Aerospace Defense Support": [
       "DCO"
+    ],
+    "Drone Delivery/Logistics": [
+      "UBER"
+    ],
+    "Rare Earth Elements": [
+      "UUUU"
     ]
   },
   "history": [
@@ -684,6 +690,22 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示四個值得關注的新動向：(1)半導體設備廠商KLAC因晶片複雜度提升而受惠，應補充到清單；(2)CrowdStrike因自主AI代理主流化而上升，反映AI網路安全新趨勢，應在現有PANW基礎上補充；(3)Molina Healthcare因醫療保險政策澄清而大漲，反映醫療服務股價值回歸；(4)Ducommun作為航太防禦供應商，在THAAD飛彈防禦需求激增背景下受惠。同時，新聞確認現有重點股票基本面完整：Nvidia、AMD等AI晶片龍頭仍為焦點，LMT與NOC防禦投資持續強勁，MU在AI基礎設施中角色核心。無明確利空導致現有股票應被移除，保守原則下僅補充有具體新聞支撐之標的。"
+    },
+    {
+      "date": "2026-08-17",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Drone Delivery/Logistics": [
+            "UBER"
+          ],
+          "Rare Earth Elements": [
+            "UUUU"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞顯示三項值得關注的趨勢：(1) Uber與Zipline無人機送貨合作凸顯物流自動化新機遇，UBER應納入Drone Delivery/Logistics新類別；(2) American Rare Earths與Novex簽署稀土氧化物合作備忘錄，反映地緣政治下關鍵礦物供應鏈的重要性，建議新增稀土類股票；(3) 記憶晶片股(MU、STX)持續上漲、AI基礎設施投資火熱、量子運算與衛星通訊維持熱度，現有清單配置仍相關。另外新聞涵蓋SpaceX營收預測、比特幣/貴金屬波動、超大型科技公司AI隱性債務等，均在現有追蹤範圍內。保守考量下，僅新增確切出現合作訊號的類別。"
     }
   ]
 }
