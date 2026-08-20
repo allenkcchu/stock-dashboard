@@ -201,6 +201,12 @@
     ],
     "Rare Earth Elements": [
       "UUUU"
+    ],
+    "Stablecoin/Blockchain Payments": [
+      "COIN"
+    ],
+    "Aluminum/Materials": [
+      "AA"
     ]
   },
   "history": [
@@ -706,6 +712,22 @@
         "removed": {}
       },
       "reasoning": "本週新聞顯示三項值得關注的趨勢：(1) Uber與Zipline無人機送貨合作凸顯物流自動化新機遇，UBER應納入Drone Delivery/Logistics新類別；(2) American Rare Earths與Novex簽署稀土氧化物合作備忘錄，反映地緣政治下關鍵礦物供應鏈的重要性，建議新增稀土類股票；(3) 記憶晶片股(MU、STX)持續上漲、AI基礎設施投資火熱、量子運算與衛星通訊維持熱度，現有清單配置仍相關。另外新聞涵蓋SpaceX營收預測、比特幣/貴金屬波動、超大型科技公司AI隱性債務等，均在現有追蹤範圍內。保守考量下，僅新增確切出現合作訊號的類別。"
+    },
+    {
+      "date": "2026-08-20",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Stablecoin/Blockchain Payments": [
+            "COIN"
+          ],
+          "Aluminum/Materials": [
+            "AA"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞重點包括：(1) 加密貨幣強勁反彈，Bitcoin價格大漲帶動加密股全面上漲，現有清單已涵蓋BTC/ETH；(2) 新興趨勢為社群媒體X考慮推出穩定幣支付，反映區塊鏈支付基礎設施需求提升，建議新增COIN追蹤；(3) Alcoa(AA)因結構性供應緊缺推動多年牛市前景，鋁材作為能源轉型關鍵材料，補充現有Materials類別；(4) SpaceX股價下跌但仍在追蹤名單中，無明確移除理由；(5) 債市波動、房貸利率變化屬正常市場循環，不構成清單調整動力；(6) Walmart銷售放緩反映消費者支出壓力，但無涉清單中任何特定股票的基本面反轉。整體而言，加密貨幣相關投資機會進一步明朗化，材料類供應鏈主題凸顯，為保守且有據可循的調整。"
     }
   ]
 }
