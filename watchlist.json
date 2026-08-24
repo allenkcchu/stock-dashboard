@@ -207,6 +207,12 @@
     ],
     "Aluminum/Materials": [
       "AA"
+    ],
+    "Industrial Equipment/Infrastructure": [
+      "LIN"
+    ],
+    "Data Center Infrastructure": [
+      "EQIX"
     ]
   },
   "history": [
@@ -728,6 +734,22 @@
         "removed": {}
       },
       "reasoning": "本週新聞重點包括：(1) 加密貨幣強勁反彈，Bitcoin價格大漲帶動加密股全面上漲，現有清單已涵蓋BTC/ETH；(2) 新興趨勢為社群媒體X考慮推出穩定幣支付，反映區塊鏈支付基礎設施需求提升，建議新增COIN追蹤；(3) Alcoa(AA)因結構性供應緊缺推動多年牛市前景，鋁材作為能源轉型關鍵材料，補充現有Materials類別；(4) SpaceX股價下跌但仍在追蹤名單中，無明確移除理由；(5) 債市波動、房貸利率變化屬正常市場循環，不構成清單調整動力；(6) Walmart銷售放緩反映消費者支出壓力，但無涉清單中任何特定股票的基本面反轉。整體而言，加密貨幣相關投資機會進一步明朗化，材料類供應鏈主題凸顯，為保守且有據可循的調整。"
+    },
+    {
+      "date": "2026-08-24",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Industrial Equipment/Infrastructure": [
+            "LIN"
+          ],
+          "Data Center Infrastructure": [
+            "EQIX"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞顯示以下重要趨勢：(1) AI資料中心基礎設施需求持續強勁，CoreWeave為Nvidia帶來利好，SGA持續加碼Equinix(EQIX)作為AI需求加速受惠者，建議新增EQIX到Data Center Infrastructure類別；(2) 工業復甦趨勢浮現，Linde(LIN)被分析師看好受惠於全球工業復甦，應新增至Industrial Equipment/Infrastructure類別；(3) 現有清單中TSM、NVDA、KLAC等核心晶片股因新聞焦點而獲得驗證；(4) 金利率下降（Treasury Yields Fall）對REITs類別有利，現有持倉維持；(5) 無明確利空導致應移除之股票。建議保守增加上述兩檔新股票以涵蓋新浮現的產業機會，其餘清單維持不變。"
     }
   ]
 }
