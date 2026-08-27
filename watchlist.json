@@ -213,6 +213,12 @@
     ],
     "Data Center Infrastructure": [
       "EQIX"
+    ],
+    "Robotics/Automation": [
+      "XPEV"
+    ],
+    "AI Satellites": [
+      "SPCX"
     ]
   },
   "history": [
@@ -750,6 +756,22 @@
         "removed": {}
       },
       "reasoning": "本週新聞顯示以下重要趨勢：(1) AI資料中心基礎設施需求持續強勁，CoreWeave為Nvidia帶來利好，SGA持續加碼Equinix(EQIX)作為AI需求加速受惠者，建議新增EQIX到Data Center Infrastructure類別；(2) 工業復甦趨勢浮現，Linde(LIN)被分析師看好受惠於全球工業復甦，應新增至Industrial Equipment/Infrastructure類別；(3) 現有清單中TSM、NVDA、KLAC等核心晶片股因新聞焦點而獲得驗證；(4) 金利率下降（Treasury Yields Fall）對REITs類別有利，現有持倉維持；(5) 無明確利空導致應移除之股票。建議保守增加上述兩檔新股票以涵蓋新浮現的產業機會，其餘清單維持不變。"
+    },
+    {
+      "date": "2026-08-27",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Robotics/Automation": [
+            "XPEV"
+          ],
+          "AI Satellites": [
+            "SPCX"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞揭示兩項重要新興趨勢：1) 太空AI衛星產業成形 - SpaceX計畫於2027年底發射首批Nvidia驅動的AI衛星，代表衛星通訊與AI芯片的融合新機會，建議新增SPCX到追蹤清單；2) 機器人商業化加速 - XPeng Robotics融資超9億美元，估值達63億，顯示自主機器人產業突破性進展，但現有清單未涵蓋此領域。其餘新聞主要聚焦：Broadcom AI業務擴張（AVGO已在清單）、記憶體芯片投資熱潮（MU、STX已在清單）、貴金屬上揚（GLD、SLV已在清單）、SpaceX融資放寬（SPACE已追蹤）等，均與現有清單主題相符。建議保守新增AI衛星與機器人兩個新類別，以捕捉明確的產業成長機會。"
     }
   ]
 }
