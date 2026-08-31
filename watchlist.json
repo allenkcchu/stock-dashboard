@@ -219,6 +219,13 @@
     ],
     "AI Satellites": [
       "SPCX"
+    ],
+    "GLP-1/Healthcare Innovation": [
+      "NOVO",
+      "ELI"
+    ],
+    "Domestic Manufacturing/Reshoring": [
+      "AAPL"
     ]
   },
   "history": [
@@ -772,6 +779,23 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示兩項重要新興趨勢：1) 太空AI衛星產業成形 - SpaceX計畫於2027年底發射首批Nvidia驅動的AI衛星，代表衛星通訊與AI芯片的融合新機會，建議新增SPCX到追蹤清單；2) 機器人商業化加速 - XPeng Robotics融資超9億美元，估值達63億，顯示自主機器人產業突破性進展，但現有清單未涵蓋此領域。其餘新聞主要聚焦：Broadcom AI業務擴張（AVGO已在清單）、記憶體芯片投資熱潮（MU、STX已在清單）、貴金屬上揚（GLD、SLV已在清單）、SpaceX融資放寬（SPACE已追蹤）等，均與現有清單主題相符。建議保守新增AI衛星與機器人兩個新類別，以捕捉明確的產業成長機會。"
+    },
+    {
+      "date": "2026-08-31",
+      "action": "update",
+      "changes": {
+        "added": {
+          "GLP-1/Healthcare Innovation": [
+            "NOVO",
+            "ELI"
+          ],
+          "Domestic Manufacturing/Reshoring": [
+            "AAPL"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞揭示兩大新興趨勢：1) GLP-1減肥藥正重塑消費行為，已帶動Victoria's Secret股價飆升近300%，此為Healthcare分類外的獨立投資機會，應新增跟蹤GLP-1龍頭企業；2) Tim Cook提前交棒前宣布Apple $60B國內製造投資，反映美國製造回流趨勢成為長期戰略，應新增追蹤。Nvidia財報後科技板塊分化加劇、油價波動、加密貨幣受升息預期壓制等新聞均屬既有清單覆蓋範圍（AI晶片、能源、加密貨幣皆已納入），無需新增類別。Klarna等個別股票下跌屬正常波動，無系統性趨勢反轉跡象，保守原則下不建議移除。"
     }
   ]
 }
