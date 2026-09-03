@@ -226,6 +226,12 @@
     ],
     "Domestic Manufacturing/Reshoring": [
       "AAPL"
+    ],
+    "Water Infrastructure": [
+      "WBI"
+    ],
+    "AI Acquisition/Strategic M&A": [
+      "HUGGING_FACE"
     ]
   },
   "history": [
@@ -796,6 +802,22 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示兩大新興趨勢：1) GLP-1減肥藥正重塑消費行為，已帶動Victoria's Secret股價飆升近300%，此為Healthcare分類外的獨立投資機會，應新增跟蹤GLP-1龍頭企業；2) Tim Cook提前交棒前宣布Apple $60B國內製造投資，反映美國製造回流趨勢成為長期戰略，應新增追蹤。Nvidia財報後科技板塊分化加劇、油價波動、加密貨幣受升息預期壓制等新聞均屬既有清單覆蓋範圍（AI晶片、能源、加密貨幣皆已納入），無需新增類別。Klarna等個別股票下跌屬正常波動，無系統性趨勢反轉跡象，保守原則下不建議移除。"
+    },
+    {
+      "date": "2026-09-03",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Water Infrastructure": [
+            "WBI"
+          ],
+          "AI Acquisition/Strategic M&A": [
+            "HUGGING_FACE"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞顯示三大重要趨勢：(1) AI產業持續主導市場，Nvidia收購Hugging Face ($13B)、Broadcom預期AI營收大幅成長、Oracle面臨AI時代營收測試，現有AI晶片及基礎設施清單已充分涵蓋；(2) Fed維持利率不變預期，支撐科技及成長股，與當前持倉策略一致；(3) 新興基礎設施需求出現，WaterBridge Infrastructure(WBI)在水資源管理領域的戰略地位值得關注，符合「關鍵基礎設施」投資主軸。此外，Nvidia對Hugging Face的收購案反映AI軟體/平台整合趨勢，建議納入追蹤。Robinhood、SpaceX、Tesla等個股雖有短期漲幅，但已在清單涵蓋範圍內(支付處理、太空產業、電動車製造)。保守評估，無需大幅調整核心持倉，僅新增上述兩項以捕捉新興機會。"
     }
   ]
 }
