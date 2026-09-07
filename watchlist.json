@@ -74,9 +74,6 @@
     "Space Industry": [
       "SPACE"
     ],
-    "Space/Commercial IPO": [
-      "SPACEX"
-    ],
     "Orbital AI Data Centers": [
       "CRWV"
     ],
@@ -232,6 +229,18 @@
     ],
     "AI Acquisition/Strategic M&A": [
       "HUGGING_FACE"
+    ],
+    "Voice AI/Enterprise Communications": [
+      "AUDC"
+    ],
+    "Biotech/Clinical Pipeline": [
+      "RNA"
+    ],
+    "Uranium/Nuclear Fuel": [
+      "EU"
+    ],
+    "Consumer Discretionary": [
+      "COST"
     ]
   },
   "history": [
@@ -818,6 +827,32 @@
         "removed": {}
       },
       "reasoning": "本週新聞顯示三大重要趨勢：(1) AI產業持續主導市場，Nvidia收購Hugging Face ($13B)、Broadcom預期AI營收大幅成長、Oracle面臨AI時代營收測試，現有AI晶片及基礎設施清單已充分涵蓋；(2) Fed維持利率不變預期，支撐科技及成長股，與當前持倉策略一致；(3) 新興基礎設施需求出現，WaterBridge Infrastructure(WBI)在水資源管理領域的戰略地位值得關注，符合「關鍵基礎設施」投資主軸。此外，Nvidia對Hugging Face的收購案反映AI軟體/平台整合趨勢，建議納入追蹤。Robinhood、SpaceX、Tesla等個股雖有短期漲幅，但已在清單涵蓋範圍內(支付處理、太空產業、電動車製造)。保守評估，無需大幅調整核心持倉，僅新增上述兩項以捕捉新興機會。"
+    },
+    {
+      "date": "2026-09-07",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Voice AI/Enterprise Communications": [
+            "AUDC"
+          ],
+          "Biotech/Clinical Pipeline": [
+            "RNA"
+          ],
+          "Uranium/Nuclear Fuel": [
+            "EU"
+          ],
+          "Consumer Discretionary": [
+            "COST"
+          ]
+        },
+        "removed": {
+          "Space/Commercial IPO": [
+            "SPACEX"
+          ]
+        }
+      },
+      "reasoning": "本週新聞揭示三個重要趨勢需納入追蹤：(1)語音AI市場機會浮現，AudioCodes (AUDC) 正押注Voice AI技術儘管現金吃緊，代表新的AI應用領域；(2)生物製藥Pipeline轉折點，Atrium (RNA) 管線進入實現階段，華爾街資金正重新配置至此類標的；(3)鈾能源實際供應挑戰，enCore Energy (EU) 銷售成本超過收益，顯示核能燃料供應鏈的現實困境，值得持續監測；(4)Costco雙位數增長與消費韌性信號，應補充消費零售代表股。另建議移除SPACEX，因該公司仍未上市（截至2026年9月），納入追蹤清單不具可操作性。整體而言，清單中Nvidia對Hugging Face的收購強化AI晶片護城河，GLP-1投資機會（Eli Lilly與Novo）持續受高資淨值人士青睞，現有防禦性配置（SGOV、REITs）對應利率環境變化亦保持適切。"
     }
   ]
 }
