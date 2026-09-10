@@ -241,6 +241,15 @@
     ],
     "Consumer Discretionary": [
       "COST"
+    ],
+    "Geothermal Energy": [
+      "HXG"
+    ],
+    "Waste Management/Infrastructure": [
+      "GFL"
+    ],
+    "Drone Technology/Defense": [
+      "AVAV"
     ]
   },
   "history": [
@@ -853,6 +862,25 @@
         }
       },
       "reasoning": "本週新聞揭示三個重要趨勢需納入追蹤：(1)語音AI市場機會浮現，AudioCodes (AUDC) 正押注Voice AI技術儘管現金吃緊，代表新的AI應用領域；(2)生物製藥Pipeline轉折點，Atrium (RNA) 管線進入實現階段，華爾街資金正重新配置至此類標的；(3)鈾能源實際供應挑戰，enCore Energy (EU) 銷售成本超過收益，顯示核能燃料供應鏈的現實困境，值得持續監測；(4)Costco雙位數增長與消費韌性信號，應補充消費零售代表股。另建議移除SPACEX，因該公司仍未上市（截至2026年9月），納入追蹤清單不具可操作性。整體而言，清單中Nvidia對Hugging Face的收購強化AI晶片護城河，GLP-1投資機會（Eli Lilly與Novo）持續受高資淨值人士青睞，現有防禦性配置（SGOV、REITs）對應利率環境變化亦保持適切。"
+    },
+    {
+      "date": "2026-09-10",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Geothermal Energy": [
+            "HXG"
+          ],
+          "Waste Management/Infrastructure": [
+            "GFL"
+          ],
+          "Drone Technology/Defense": [
+            "AVAV"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞顯示三個新興產業趨勢值得納入追蹤：(1) 地熱能開發 - Hexagon與Weyerhaeuser的太平洋西北部地熱開發協議代表替代能源的新方向，應補充地熱相關公司；(2) 廢棄物基礎設施 - GFL完成SECURE收購顯示垃圾處理與環保基礎設施整合的機會，與能源/基礎設施主題相符；(3) 無人機技術 - AeroVironment業績超預期且獲得分析師上調目標，與既有Drone Delivery/Logistics主題(UBER)相關但缺乏純無人機製造商。此外，新聞中Nvidia供應鏈管理、Coinbase穩定幣支付擴展、SpaceX數據中心升級等內容均與現有清單主題(半導體、加密貨幣、衛星/空間產業)保持一致，無需移除任何股票。債券收益率上升和油價突破100美元的巨觀環境變化已反映在現有Real Estate Sensitive和Energy類股中。"
     }
   ]
 }
