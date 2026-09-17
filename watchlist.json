@@ -268,6 +268,12 @@
     ],
     "Data Warehouse/Cloud Analytics": [
       "SNOW"
+    ],
+    "OpenAI/AI Foundation Models": [
+      "OPENAI"
+    ],
+    "DeFi/Blockchain Media": [
+      "ROUND"
     ]
   },
   "history": [
@@ -927,6 +933,22 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示多個重要新趨勢應納入追蹤：(1) Robinhood與Crypto.com的預測市場合作顯示加密貨幣衍生產品的新機會，HOOD應列入；(2) Roivant在肺動脈高血壓領域的突破性進展，代表生技臨床管線的重要機會；(3) Diversified Energy的Permian油田1.8B投資反映能源復甦趨勢，DEC應納入能源清單；(4) Gentherm與Modine合併完成，顯示汽車電氣化供應鏈整合，THRM應列入；(5) C3.ai與Snowflake的最新季度表現突出，AI企業軟體與資料倉儲需求持續強勁，建議納入追蹤。其餘新聞（聯邦會議、利率、消費者議題等）未引發清單內股票的結構性利空或新產業機會，現有清單對AI晶片、防務、能源、核能、衛星等主要趨勢的覆蓋已相當完整。"
+    },
+    {
+      "date": "2026-09-17",
+      "action": "update",
+      "changes": {
+        "added": {
+          "OpenAI/AI Foundation Models": [
+            "OPENAI"
+          ],
+          "DeFi/Blockchain Media": [
+            "ROUND"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞呈現三大重要趨勢：(1) OpenAI模型安全性備受關注，其融資動向（Oracle跳漲6%）顯示OpenAI作為AI基礎設施層的戰略重要性，建議新增OpenAI追蹤；(2) Roundtable Secures 10年$10億協議，將AI與DeFi媒體系統商業化，代表新興的AI/DeFi融合趨勢，應新增DeFi/Blockchain Media類別；(3) 聯邦準備委員會升息決策已充分反映在現有金融敏感型持股（SGOV、房地產類）；(4) AMD、NVDA等晶片領導者持續表現強勢，符合清單既有AI晶片部位；(5) 加密貨幣價格隨聯準會決策波動，BTC/ETH現有部位適當。現有清單已涵蓋OpenAI主要客戶（MSFT、AMZN、ORCL），但直接追蹤OpenAI本身將更精準捕捉AI基礎模型層的風險收益。其他上市公司（Tesla、Meta、Apple）相關新聞為營運層面，無需調整類別。"
     }
   ]
 }
