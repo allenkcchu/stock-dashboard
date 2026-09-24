@@ -274,6 +274,15 @@
     ],
     "DeFi/Blockchain Media": [
       "ROUND"
+    ],
+    "Optical/Photonic Semiconductors": [
+      "LRCX"
+    ],
+    "Rail/Transportation Infrastructure": [
+      "WAB"
+    ],
+    "Biotech/Cardiovascular": [
+      "NAMS"
     ]
   },
   "history": [
@@ -958,6 +967,25 @@
         "removed": {}
       },
       "reasoning": "本週新聞主要聚焦於個人理財、退休規劃、房貸策略及高收益存款利率等零售投資話題，以及部分企業領導人故事和加密貨幣價格分析。這些內容與現有追蹤清單的核心投資主題（AI芯片、數據中心、國防、核能、半導體等）無明確交集。雖然新聞提及特斯拉德州配送中心擴張（與TSLA相關）和蘋果股票信號，但現有清單已包含AAPL，且該新聞缺乏具體催化劑。聯邦基準利率可能進一步上升的市場預期與現有「利率敏感」類別（REITs）已充分反映。按照保守原則，在無明確新產業趨勢或具體利空信號的情況下，維持現有追蹤清單不變。"
+    },
+    {
+      "date": "2026-09-24",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Optical/Photonic Semiconductors": [
+            "LRCX"
+          ],
+          "Rail/Transportation Infrastructure": [
+            "WAB"
+          ],
+          "Biotech/Cardiovascular": [
+            "NAMS"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞揭示三個值得關注的新趨勢：(1)光學芯片與光通訊技術正快速發展，Lumentum與Corning在AI光學貿易中表現分化，新聞明確指出AI光學芯片需求強勁，建議新增光學半導體類別；(2)軌道交通基礎設施投資持續升溫，Westinghouse Air Brake簽署7億美元合約，反映運輸基礎設施現代化趨勢，應納入追蹤；(3)NewAmsterdam Pharma獲得歐盟批准的膽固醇藥物展現心血管領域機會。此外，新聞確認既有清單中的關鍵趨勢仍然成立：AI芯片競爭(INTC、AMD持續交鋒)、數據中心光學基礎設施需求、Nvidia在AI競爭中的領導地位、企業AI軟件應用(Salesforce產品創新)等，均與現有追蹤主題相符。暫無股票需要移除，市場動態支持現有配置。"
     }
   ]
 }
