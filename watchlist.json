@@ -276,13 +276,17 @@
       "ROUND"
     ],
     "Optical/Photonic Semiconductors": [
-      "LRCX"
+      "LRCX",
+      "LUMN"
     ],
     "Rail/Transportation Infrastructure": [
       "WAB"
     ],
     "Biotech/Cardiovascular": [
       "NAMS"
+    ],
+    "Enterprise AI Software": [
+      "ACN"
     ]
   },
   "history": [
@@ -986,6 +990,26 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示三個值得關注的新趨勢：(1)光學芯片與光通訊技術正快速發展，Lumentum與Corning在AI光學貿易中表現分化，新聞明確指出AI光學芯片需求強勁，建議新增光學半導體類別；(2)軌道交通基礎設施投資持續升溫，Westinghouse Air Brake簽署7億美元合約，反映運輸基礎設施現代化趨勢，應納入追蹤；(3)NewAmsterdam Pharma獲得歐盟批准的膽固醇藥物展現心血管領域機會。此外，新聞確認既有清單中的關鍵趨勢仍然成立：AI芯片競爭(INTC、AMD持續交鋒)、數據中心光學基礎設施需求、Nvidia在AI競爭中的領導地位、企業AI軟件應用(Salesforce產品創新)等，均與現有追蹤主題相符。暫無股票需要移除，市場動態支持現有配置。"
+    },
+    {
+      "date": "2026-09-28",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Optical/Photonic Semiconductors": [
+            "LRCX",
+            "LUMN"
+          ],
+          "Rail/Transportation Infrastructure": [
+            "WAB"
+          ],
+          "Enterprise AI Software": [
+            "ACN"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞揭示三個重要趨勢值得關注：(1) 光學芯片與光子半導體需求激增 - 新聞指出Lumentum因AI光學應用大漲近10%，而Corning表現落後，暗示光學/光子領域正與傳統半導體市場分化，LRCX已在清單但應補充相關業者；(2) 軌道運輸基礎設施受益 - Westinghouse Air Brake簽署7億美元鐵路服務大單，WAB已在清單「Rail/Transportation Infrastructure」；(3) 企業AI軟體需求 - Accenture報導顯示AI安全與企業應用需求，值得在「AI Enterprise Software」主題中補強。此外，Intel/AMD/INTC等芯片股因Gelsinger支持挑戰Nvidia、Intel潛在估值重估等新聞仍在焦點，現有清單涵蓋充分。Memory半導體(MU/Hynix競爭)、支付處理、消費品等既有主題新聞亦未顯示重大趨勢反轉，保持現狀為宜。"
     }
   ]
 }
