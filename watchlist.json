@@ -287,6 +287,9 @@
     ],
     "Enterprise AI Software": [
       "ACN"
+    ],
+    "AI Networking Semiconductors": [
+      "AMPH"
     ]
   },
   "history": [
@@ -1010,6 +1013,31 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示三個重要趨勢值得關注：(1) 光學芯片與光子半導體需求激增 - 新聞指出Lumentum因AI光學應用大漲近10%，而Corning表現落後，暗示光學/光子領域正與傳統半導體市場分化，LRCX已在清單但應補充相關業者；(2) 軌道運輸基礎設施受益 - Westinghouse Air Brake簽署7億美元鐵路服務大單，WAB已在清單「Rail/Transportation Infrastructure」；(3) 企業AI軟體需求 - Accenture報導顯示AI安全與企業應用需求，值得在「AI Enterprise Software」主題中補強。此外，Intel/AMD/INTC等芯片股因Gelsinger支持挑戰Nvidia、Intel潛在估值重估等新聞仍在焦點，現有清單涵蓋充分。Memory半導體(MU/Hynix競爭)、支付處理、消費品等既有主題新聞亦未顯示重大趨勢反轉，保持現狀為宜。"
+    },
+    {
+      "date": "2026-10-01",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Optical/Photonic Semiconductors": [
+            "LRCX"
+          ],
+          "Rail/Transportation Infrastructure": [
+            "WAB"
+          ],
+          "Enterprise AI Software": [
+            "ACN"
+          ],
+          "Biotech/Cardiovascular": [
+            "NAMS"
+          ],
+          "AI Networking Semiconductors": [
+            "AMPH"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞揭示三項重要產業趨勢：(1) AI光學芯片領域異軍突起，Lumentum跳漲近10%且新芯片將光速翻倍，顯示光電半導體需求爆發，LRCX應補充至清單；(2) WAB獲得7億美元級鐵路服務合同，印證軌道運輸基礎設施投資加速，清單中已有WAB但未充分強調；(3) 多家AI企業軟體公司獲關注（含Salesforce大舉挑戰微軟），ACN因AI安全與企業AI應用成為焦點，應加入；(4) NewAmsterdam Pharma(NAMS)獲歐盟批准心血管藥物，符合生技臨床管線投資主題。另Pat Gelsinger支持對Nvidia AI網路的挑戰提示新競爭者浮現，但現存清單已涵蓋主要競爭對手。整體而言，光學芯片和軌道運輸領域為新興關鍵焦點，應增強關注度。"
     }
   ]
 }
