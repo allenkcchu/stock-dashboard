@@ -290,6 +290,17 @@
     ],
     "AI Networking Semiconductors": [
       "AMPH"
+    ],
+    "Space Defense/Hypersonic Threats": [
+      "LMT",
+      "RTX",
+      "NOC"
+    ],
+    "Prediction Markets/Sports Betting": [
+      "HOOD"
+    ],
+    "Consumer Electronics/AI Integration": [
+      "AAPL"
     ]
   },
   "history": [
@@ -1038,6 +1049,27 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示三項重要產業趨勢：(1) AI光學芯片領域異軍突起，Lumentum跳漲近10%且新芯片將光速翻倍，顯示光電半導體需求爆發，LRCX應補充至清單；(2) WAB獲得7億美元級鐵路服務合同，印證軌道運輸基礎設施投資加速，清單中已有WAB但未充分強調；(3) 多家AI企業軟體公司獲關注（含Salesforce大舉挑戰微軟），ACN因AI安全與企業AI應用成為焦點，應加入；(4) NewAmsterdam Pharma(NAMS)獲歐盟批准心血管藥物，符合生技臨床管線投資主題。另Pat Gelsinger支持對Nvidia AI網路的挑戰提示新競爭者浮現，但現存清單已涵蓋主要競爭對手。整體而言，光學芯片和軌道運輸領域為新興關鍵焦點，應增強關注度。"
+    },
+    {
+      "date": "2026-10-08",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Space Defense/Hypersonic Threats": [
+            "LMT",
+            "RTX",
+            "NOC"
+          ],
+          "Prediction Markets/Sports Betting": [
+            "HOOD"
+          ],
+          "Consumer Electronics/AI Integration": [
+            "AAPL"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞凸顯三大新興趨勢：(1)俄中高超音速導彈威脅推升太空防禦需求，衛星CEO強調防禦重要性，現有防禦類股（LMT、RTX、NOC）相關性提升，應強化監控；(2)預測市場監管爭議升溫，NFL向最高法院提訴要求州級監管，HOOD作為預測市場/加密平台受關注度提高，已在清單中應繼續追蹤；(3)微軟推出高端Surface Laptop搭載Nvidia AI晶片、Amazon推高價Alexa平板，消費電子AI整合成新焦點，AAPL作為國內製造/晶片集成領導者應強化追蹤。此外，OpenAI營收報告引發AI股拋售、金融顧問榜單公佈、共和黨大捐客湧入加密與AI領域等新聞均與現有清單主題相符。能源（油價跳升因伊朗攻擊、颶風威脅），REIT（利率上升時仍表現穩健）等現有追蹤主題仍為市場焦點，無需移除。"
     }
   ]
 }
