@@ -301,6 +301,13 @@
     ],
     "Consumer Electronics/AI Integration": [
       "AAPL"
+    ],
+    "Homegrown AI Chips/Chip Independence": [
+      "MSFT"
+    ],
+    "Capital Equipment/Infrastructure Bottleneck": [
+      "KLAC",
+      "LRCX"
     ]
   },
   "history": [
@@ -1070,6 +1077,23 @@
         "removed": {}
       },
       "reasoning": "本週新聞凸顯三大新興趨勢：(1)俄中高超音速導彈威脅推升太空防禦需求，衛星CEO強調防禦重要性，現有防禦類股（LMT、RTX、NOC）相關性提升，應強化監控；(2)預測市場監管爭議升溫，NFL向最高法院提訴要求州級監管，HOOD作為預測市場/加密平台受關注度提高，已在清單中應繼續追蹤；(3)微軟推出高端Surface Laptop搭載Nvidia AI晶片、Amazon推高價Alexa平板，消費電子AI整合成新焦點，AAPL作為國內製造/晶片集成領導者應強化追蹤。此外，OpenAI營收報告引發AI股拋售、金融顧問榜單公佈、共和黨大捐客湧入加密與AI領域等新聞均與現有清單主題相符。能源（油價跳升因伊朗攻擊、颶風威脅），REIT（利率上升時仍表現穩健）等現有追蹤主題仍為市場焦點，無需移除。"
+    },
+    {
+      "date": "2026-10-12",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Homegrown AI Chips/Chip Independence": [
+            "MSFT"
+          ],
+          "Capital Equipment/Infrastructure Bottleneck": [
+            "KLAC",
+            "LRCX"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞呈現三大重要趨勢：(1)Microsoft宣布加強自主AI芯片開發以減少對NVIDIA依賴，反映大型科技巨頭的芯片自給戰略轉變，MSFT應納入「Homegrown AI Chips/Chip Independence」新類別；(2)Intel與Broadcom CEO聯合警告資本設備短缺可能成為AI發展最大瓶頸，強化半導體設備製造商（KLAC、LRCX）的戰略重要性，建議強化「Semiconductor Equipment」類別；(3)IonQ收購網絡安全公司Elisity強化量子計算生態，現有清單已涵蓋IONQ，無需新增。其餘新聞多為政治、總體經濟、個別公司事件，未涉及清單中主要追蹤的產業結構性變化。建議監控Microsoft在AI芯片領域的進展，並關注資本設備供應瓶頸對AI基礎設施投資的影響。"
     }
   ]
 }
