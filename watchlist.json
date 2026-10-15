@@ -308,6 +308,16 @@
     "Capital Equipment/Infrastructure Bottleneck": [
       "KLAC",
       "LRCX"
+    ],
+    "Personal AI Devices": [
+      "AMZN"
+    ],
+    "Military Space Systems": [
+      "SPACE",
+      "RKLB"
+    ],
+    "Energy Security/Geopolitical": [
+      "UUUU"
     ]
   },
   "history": [
@@ -1094,6 +1104,26 @@
         "removed": {}
       },
       "reasoning": "本週新聞呈現三大重要趨勢：(1)Microsoft宣布加強自主AI芯片開發以減少對NVIDIA依賴，反映大型科技巨頭的芯片自給戰略轉變，MSFT應納入「Homegrown AI Chips/Chip Independence」新類別；(2)Intel與Broadcom CEO聯合警告資本設備短缺可能成為AI發展最大瓶頸，強化半導體設備製造商（KLAC、LRCX）的戰略重要性，建議強化「Semiconductor Equipment」類別；(3)IonQ收購網絡安全公司Elisity強化量子計算生態，現有清單已涵蓋IONQ，無需新增。其餘新聞多為政治、總體經濟、個別公司事件，未涉及清單中主要追蹤的產業結構性變化。建議監控Microsoft在AI芯片領域的進展，並關注資本設備供應瓶頸對AI基礎設施投資的影響。"
+    },
+    {
+      "date": "2026-10-15",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Personal AI Devices": [
+            "AMZN"
+          ],
+          "Military Space Systems": [
+            "SPACE",
+            "RKLB"
+          ],
+          "Energy Security/Geopolitical": [
+            "UUUU"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞呈現三個重要趨勢：(1) Amazon推出Bee個人AI設備，標誌消費級AI硬體的新戰場，應強化對AMZN的關注；(2) Starshield軍事化Starlink服務與美國對太空國防重視升溫，確認SPACE和RKLB的戰略價值；(3) 中東緊張局勢升溫導致能源地緣政治風險提升，稀有金屬UUUU的重要性提高。同時，記憶體股票因中國競爭與2029產能過剩受壓，但清單中MU和STX已涵蓋此類風險，無需新增。AI晶片拋售雖為短期利空，但反映市場情緒波動而非基本面轉折，TSMC創紀錄獲利與AI需求仍強勁的新聞相互印證，現有AI晶片清單仍適用。財政赤字與公債收益率上升為宏觀風險，但不構成特定股票調整的充分理由。整體而言，清單已涵蓋核心趨勢，微幅補強個人AI與軍事太空領域即可。"
     }
   ]
 }
