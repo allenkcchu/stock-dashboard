@@ -336,6 +336,21 @@
     ],
     "Starlink/Satellite Communications Policy": [
       "RKLB"
+    ],
+    "Satellite Communications Policy/Geopolitical": [
+      "RKLB"
+    ],
+    "Energy/Oil Price Surge": [
+      "XLE",
+      "CVX",
+      "COP"
+    ],
+    "Luxury Travel/Hospitality": [
+      "CCL",
+      "RCL"
+    ],
+    "Payment Processing/Travel": [
+      "AXP"
     ]
   },
   "history": [
@@ -1170,6 +1185,35 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示多項新興趨勢：(1) AI就業替代風險被廣泛討論，特別是對女性勞動力的影響，應關注企業軟體與AI整合相關股票；(2) 美國期權交易24小時化趨勢成形，衍生商品交易需求上升；(3) 機構投資者進場購買長期資產（如林地），反映另類資產配置機會；(4) OpenAI/Anthropic IPO預期與AI模型獨立性討論升溫，Microsoft與Google自主AI芯片戰略重要性提升；(5) SpaceX與Starlink涉及地緣政治與美國援外政策，需關注衛星通訊政策風險。現有清單已涵蓋主要AI、國防、能源主題，新聞並無明確股票利空或產業反轉信號，故僅需精細調整以反映政策與就業影響的新維度。"
+    },
+    {
+      "date": "2026-10-22",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Satellite Communications Policy/Geopolitical": [
+            "RKLB"
+          ],
+          "Energy/Oil Price Surge": [
+            "XLE",
+            "CVX",
+            "COP"
+          ],
+          "Luxury Travel/Hospitality": [
+            "CCL",
+            "RCL"
+          ],
+          "Payment Processing/Travel": [
+            "AXP"
+          ]
+        },
+        "removed": {
+          "AI Data Center Infrastructure": [
+            "CRWV"
+          ]
+        }
+      },
+      "reasoning": "本週新聞反映三大重要趨勢變化：(1)衛星通訊政策風險升溫——Musk與烏克蘭衝突加速Starlink替代品需求，RKLB面臨政策風險，但因已在清單中「Starlink/Satellite Communications Policy」，無須額外添加；(2)油價急漲驅動能源機會——Brent原油突破$113創今年新高，Trump可能對伊朗採取行動進一步推高能源價格，應補充傳統油氣股(XLE、CVX、COP)至能源板塊；(3)奢侈旅遊復甦——郵輪公司推出高端套房(最高$25,000/晚)、Amex強化旅遊平台整合，反映高端消費者信心，應新增CCL、RCL至奢侈旅遊、AXP至支付處理平台類別；(4)CoreWeave融資危機——債券收益率飆升導致股價下跌，Blackstone表示可度過難關但風險未消，建議暫時移除以規避融資不確定性。Meta因AI支出導致自由現金流轉負新聞暫未構成清單調整門檻，但值得密切關注。"
     }
   ]
 }
