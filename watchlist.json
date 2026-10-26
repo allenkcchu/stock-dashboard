@@ -351,6 +351,22 @@
     ],
     "Payment Processing/Travel": [
       "AXP"
+    ],
+    "Private Equity/Defense Tech": [
+      "KKR",
+      "BDT",
+      "PYPL"
+    ],
+    "Mass Layoffs/AI Efficiency": [
+      "MSFT"
+    ],
+    "Prediction Markets/Election": [
+      "HOOD",
+      "COIN"
+    ],
+    "Alternative Assets/Private Markets": [
+      "BX",
+      "KKR"
     ]
   },
   "history": [
@@ -1214,6 +1230,32 @@
         }
       },
       "reasoning": "本週新聞反映三大重要趨勢變化：(1)衛星通訊政策風險升溫——Musk與烏克蘭衝突加速Starlink替代品需求，RKLB面臨政策風險，但因已在清單中「Starlink/Satellite Communications Policy」，無須額外添加；(2)油價急漲驅動能源機會——Brent原油突破$113創今年新高，Trump可能對伊朗採取行動進一步推高能源價格，應補充傳統油氣股(XLE、CVX、COP)至能源板塊；(3)奢侈旅遊復甦——郵輪公司推出高端套房(最高$25,000/晚)、Amex強化旅遊平台整合，反映高端消費者信心，應新增CCL、RCL至奢侈旅遊、AXP至支付處理平台類別；(4)CoreWeave融資危機——債券收益率飆升導致股價下跌，Blackstone表示可度過難關但風險未消，建議暫時移除以規避融資不確定性。Meta因AI支出導致自由現金流轉負新聞暫未構成清單調整門檻，但值得密切關注。"
+    },
+    {
+      "date": "2026-10-26",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Private Equity/Defense Tech": [
+            "KKR",
+            "BDT",
+            "PYPL"
+          ],
+          "Mass Layoffs/AI Efficiency": [
+            "MSFT"
+          ],
+          "Prediction Markets/Election": [
+            "HOOD",
+            "COIN"
+          ],
+          "Alternative Assets/Private Markets": [
+            "BX",
+            "KKR"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞突顯三大新興趨勢：(1) Microsoft大規模員工自願離職計畫凸顯AI帶動的效率優化與職場重構，MSFT作為AI推動者需強化追蹤；(2) 私募股權機構(Apollo、Mubadala)與防禦科技投資激增，反映地緣政治風險下防禦技術資金湧入，建議新增私募股權主題；(3) NBA與Kalshi/Polymarket合作、Lula巴西大選預測市場活動，預測市場的機構採用加速，HOOD與COIN相關性提升。聯邦利率維持穩定、能源地緣緩和(沙特伊朗對話)等新聞與現有Energy/Geopolitical主題一致。Meta 95億美元AI擴張、Microsoft自願離職與Fanatics-OpenAI合作則強化現有AI Infrastructure與Enterprise AI Software主題的成長敘事。保留所有現有清單，因科技、防禦、能源、量子運算等主題仍為核心投資邏輯。"
     }
   ]
 }
