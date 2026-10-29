@@ -367,6 +367,16 @@
     "Alternative Assets/Private Markets": [
       "BX",
       "KKR"
+    ],
+    "Prediction Markets/Derivatives": [
+      "KALSHI"
+    ],
+    "Refining/Energy Infrastructure": [
+      "RDS.A",
+      "RDS.B"
+    ],
+    "Insurance/Risk Management": [
+      "AON"
     ]
   },
   "history": [
@@ -1256,6 +1266,26 @@
         "removed": {}
       },
       "reasoning": "本週新聞突顯三大新興趨勢：(1) Microsoft大規模員工自願離職計畫凸顯AI帶動的效率優化與職場重構，MSFT作為AI推動者需強化追蹤；(2) 私募股權機構(Apollo、Mubadala)與防禦科技投資激增，反映地緣政治風險下防禦技術資金湧入，建議新增私募股權主題；(3) NBA與Kalshi/Polymarket合作、Lula巴西大選預測市場活動，預測市場的機構採用加速，HOOD與COIN相關性提升。聯邦利率維持穩定、能源地緣緩和(沙特伊朗對話)等新聞與現有Energy/Geopolitical主題一致。Meta 95億美元AI擴張、Microsoft自願離職與Fanatics-OpenAI合作則強化現有AI Infrastructure與Enterprise AI Software主題的成長敘事。保留所有現有清單，因科技、防禦、能源、量子運算等主題仍為核心投資邏輯。"
+    },
+    {
+      "date": "2026-10-29",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Prediction Markets/Derivatives": [
+            "KALSHI"
+          ],
+          "Refining/Energy Infrastructure": [
+            "RDS.A",
+            "RDS.B"
+          ],
+          "Insurance/Risk Management": [
+            "AON"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞揭示三大新興趨勢值得關注：(1) 預測市場熱度持續升溫，Kalshi估值飆至400億美元，反映該領域機構資金大量湧入，應新增預測市場股票；(2) 石油公司利潤創新高且煉油邊際利潤達紀錄水準，Shell季度利潤近乎翻倍，儘管投資者需謹慎但能源板塊實質受益明顯，建議補充傳統能源巨頭；(3) AI數據中心保險風險浮現，Aon CEO警告融資威脅，反映保險業成為AI基礎設施建設的新瓶頸，應納入風險管理角度。此外，Google/Microsoft延緩資本支出預測、Alphabet搜尋廣告業務面臨AI衝擊等新聞皆在現有清單涵蓋範圍內。建議監控：AI保險成本上升對數據中心投資的實質影響、傳統能源與新能源的投資輪動動態。"
     }
   ]
 }
