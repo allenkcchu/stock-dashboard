@@ -377,7 +377,20 @@
     ],
     "Insurance/Risk Management": [
       "AON"
-    ]
+    ],
+    "Prediction Markets": [
+      "HOOD",
+      "COIN"
+    ],
+    "Sovereign AI Models": [
+      "MSFT",
+      "GOOG"
+    ],
+    "Capital Markets/Private Credit": [
+      "BX",
+      "KKR"
+    ],
+    "Construction AI/Safety Tech": []
   },
   "history": [
     {
@@ -1286,6 +1299,29 @@
         "removed": {}
       },
       "reasoning": "本週新聞揭示三大新興趨勢值得關注：(1) 預測市場熱度持續升溫，Kalshi估值飆至400億美元，反映該領域機構資金大量湧入，應新增預測市場股票；(2) 石油公司利潤創新高且煉油邊際利潤達紀錄水準，Shell季度利潤近乎翻倍，儘管投資者需謹慎但能源板塊實質受益明顯，建議補充傳統能源巨頭；(3) AI數據中心保險風險浮現，Aon CEO警告融資威脅，反映保險業成為AI基礎設施建設的新瓶頸，應納入風險管理角度。此外，Google/Microsoft延緩資本支出預測、Alphabet搜尋廣告業務面臨AI衝擊等新聞皆在現有清單涵蓋範圍內。建議監控：AI保險成本上升對數據中心投資的實質影響、傳統能源與新能源的投資輪動動態。"
+    },
+    {
+      "date": "2026-11-02",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Prediction Markets": [
+            "HOOD",
+            "COIN"
+          ],
+          "Sovereign AI Models": [
+            "MSFT",
+            "GOOG"
+          ],
+          "Capital Markets/Private Credit": [
+            "BX",
+            "KKR"
+          ],
+          "Construction AI/Safety Tech": []
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞反映三大新興趨勢：(1)預測市場熱度顯著上升—民主黨贏得參議院機率升至75%、德州州長選舉預測市場交投活躍，HOOD、COIN已在清單中但需強化關注；(2)主權AI模型成為地緣政治焦點—南韓宣布創紀錄預算發展世界最高性能主權AI，MSFT、GOOG的芯片獨立戰略更顯關鍵；(3)私募信貸平台擴張—Apollo推出110億美元私募信貸平台，BX、KKR等另類資產管理者機會增加。Palantir商業營收超越政府部門首次創歷史，印證AI軟體應用爆發持續。Oracle融資200億支持AI基建投資亦驗證現有AI基礎設施主題。建築現場AI應用（新聞提及但尚無明確標的）暫無具體股票映射。原清單覆蓋度充分，主要是強化對預測市場與主權AI模型動向的監控，無需移除標的。"
     }
   ]
 }
