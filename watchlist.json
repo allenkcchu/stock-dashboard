@@ -97,12 +97,6 @@
     "Commercial Real Estate": [
       "BXP"
     ],
-    "AI Data Centers & Infrastructure": [
-      "EVTL"
-    ],
-    "Gaming/Entertainment": [
-      "TTWO"
-    ],
     "AI Data Center Infrastructure": [
       "TERAWULF"
     ],
@@ -362,7 +356,8 @@
     ],
     "Prediction Markets/Election": [
       "HOOD",
-      "COIN"
+      "COIN",
+      "KALSHI"
     ],
     "Alternative Assets/Private Markets": [
       "BX",
@@ -390,7 +385,17 @@
       "BX",
       "KKR"
     ],
-    "Construction AI/Safety Tech": []
+    "Construction AI/Safety Tech": [],
+    "Data Center Water/Environmental Impact": [
+      "POOL",
+      "AWK"
+    ],
+    "Democratic Policy Risk/Tax Changes": [
+      "BX",
+      "KKR",
+      "MA",
+      "V"
+    ]
   },
   "history": [
     {
@@ -1322,6 +1327,36 @@
         "removed": {}
       },
       "reasoning": "本週新聞反映三大新興趨勢：(1)預測市場熱度顯著上升—民主黨贏得參議院機率升至75%、德州州長選舉預測市場交投活躍，HOOD、COIN已在清單中但需強化關注；(2)主權AI模型成為地緣政治焦點—南韓宣布創紀錄預算發展世界最高性能主權AI，MSFT、GOOG的芯片獨立戰略更顯關鍵；(3)私募信貸平台擴張—Apollo推出110億美元私募信貸平台，BX、KKR等另類資產管理者機會增加。Palantir商業營收超越政府部門首次創歷史，印證AI軟體應用爆發持續。Oracle融資200億支持AI基建投資亦驗證現有AI基礎設施主題。建築現場AI應用（新聞提及但尚無明確標的）暫無具體股票映射。原清單覆蓋度充分，主要是強化對預測市場與主權AI模型動向的監控，無需移除標的。"
+    },
+    {
+      "date": "2026-11-05",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Prediction Markets/Election": [
+            "KALSHI"
+          ],
+          "Data Center Water/Environmental Impact": [
+            "POOL",
+            "AWK"
+          ],
+          "Democratic Policy Risk/Tax Changes": [
+            "BX",
+            "KKR",
+            "MA",
+            "V"
+          ]
+        },
+        "removed": {
+          "AI Data Centers & Infrastructure": [
+            "EVTL"
+          ],
+          "Gaming/Entertainment": [
+            "TTWO"
+          ]
+        }
+      },
+      "reasoning": "本週新聞反映多個重要趨勢變化：(1)民主黨掃蕩中期選舉後，推動AI數據中心建設暫停令及對富人徵稅政策，AI基礎設施面臨政策風險，此前樂觀預期需調整；(2)預測市場成為新焦點(KALSHI未在清單中但頻現新聞)，與HOOD、COIN形成新熱點；(3)選民關注AI數據中心對水資源的影響，水資源基礎設施公司(如水務、水處理)值得關注；(4)徵稅政策威脅對私募股權(BX、KKR)及支付處理商(MA、V)有直接衝擊，應強化監控；(5)EVTL與TTWO在新聞中未見相關支持證據，應移除以聚焦核心持倉。整體而言，政策風險上升，地緣政治(中美科技競賽)仍為主軸，但數據中心環境監管成為新變數。"
     }
   ]
 }
