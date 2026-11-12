@@ -221,9 +221,6 @@
     "Water Infrastructure": [
       "WBI"
     ],
-    "AI Acquisition/Strategic M&A": [
-      "HUGGING_FACE"
-    ],
     "Voice AI/Enterprise Communications": [
       "AUDC"
     ],
@@ -262,9 +259,6 @@
     ],
     "Data Warehouse/Cloud Analytics": [
       "SNOW"
-    ],
-    "OpenAI/AI Foundation Models": [
-      "OPENAI"
     ],
     "DeFi/Blockchain Media": [
       "ROUND"
@@ -398,6 +392,16 @@
     ],
     "Obesity/GLP-1 Therapeutics": [
       "LLY"
+    ],
+    "AI Leadership Risk/Executive Transition": [
+      "NVDA"
+    ],
+    "Electric Vehicle Manufacturing": [
+      "FSR"
+    ],
+    "Prediction Markets/Political Risk": [
+      "HOOD",
+      "COIN"
     ]
   },
   "history": [
@@ -1376,6 +1380,33 @@
         "removed": {}
       },
       "reasoning": "本週新聞顯示三個值得關注的趨勢：(1) 預測市場熱度持續升溫，數百萬美元在選舉夜大量湧入交易，KALSHI應補入清單完整性；(2) Eli Lilly的Foundayo肥胖症新藥於晚期試驗中緩解睡眠呼吸暫停，為FDA批准鋪路，顯示GLP-1領域持續創新，建議新增LLY於肥胖/GLP-1治療類別；(3) Nvidia CEO風波引發市場關注，但預測市場顯示Jensen Huang離職機率低，現階段無需移除NVDA或相關晶片股。其他新聞（Boeing裁員、PepsiCo裁員、Honda投資俄亥俄州工廠）均屬個別公司事件或已納入既有分類（航防、國內製造回流），無需調整清單。"
+    },
+    {
+      "date": "2026-11-12",
+      "action": "update",
+      "changes": {
+        "added": {
+          "AI Leadership Risk/Executive Transition": [
+            "NVDA"
+          ],
+          "Electric Vehicle Manufacturing": [
+            "FSR"
+          ],
+          "Prediction Markets/Political Risk": [
+            "HOOD",
+            "COIN"
+          ]
+        },
+        "removed": {
+          "AI Acquisition/Strategic M&A": [
+            "HUGGING_FACE"
+          ],
+          "OpenAI/AI Foundation Models": [
+            "OPENAI"
+          ]
+        }
+      },
+      "reasoning": "本週最重要趨勢為Nvidia CEO Jensen Huang突然離職，觸發股價下跌4%以上，引發市場對AI芯片產業領導力與公司治理的重大擔憂。建議新增『AI Leadership Risk/Executive Transition』類別追蹤NVDA領導層變化影響。Scout Motors在南卡羅來納州投資20億美元電動車廠、預訂量達21.2萬輛，反映美國電動車製造回流趨勢，建議新增Fisker (FSR)追蹤。Trump政策轉向及Donald Trump Jr.退出Kalshi顧問角色，預示預測市場與政治風險成為新焦點，強化HOOD與COIN的戰略重要性。另因虛構公司HUGGING_FACE與OPENAI不存在於真實股市，應移除以保持清單準確性。其他主要趨勢如能源安全(伊朗政策影響油價)、聯邦政策(401k額度調整)、科技中斷風險(微軟故障)均已在既有清單中充分涵蓋。"
     }
   ]
 }
