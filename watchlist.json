@@ -402,6 +402,12 @@
     "Prediction Markets/Political Risk": [
       "HOOD",
       "COIN"
+    ],
+    "Prediction Markets/Trading": [
+      "KALSHI"
+    ],
+    "Anthropic/AI Safety": [
+      "ANTHROPIC_IPO_PENDING"
     ]
   },
   "history": [
@@ -1407,6 +1413,22 @@
         }
       },
       "reasoning": "本週最重要趨勢為Nvidia CEO Jensen Huang突然離職，觸發股價下跌4%以上，引發市場對AI芯片產業領導力與公司治理的重大擔憂。建議新增『AI Leadership Risk/Executive Transition』類別追蹤NVDA領導層變化影響。Scout Motors在南卡羅來納州投資20億美元電動車廠、預訂量達21.2萬輛，反映美國電動車製造回流趨勢，建議新增Fisker (FSR)追蹤。Trump政策轉向及Donald Trump Jr.退出Kalshi顧問角色，預示預測市場與政治風險成為新焦點，強化HOOD與COIN的戰略重要性。另因虛構公司HUGGING_FACE與OPENAI不存在於真實股市，應移除以保持清單準確性。其他主要趨勢如能源安全(伊朗政策影響油價)、聯邦政策(401k額度調整)、科技中斷風險(微軟故障)均已在既有清單中充分涵蓋。"
+    },
+    {
+      "date": "2026-11-16",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Prediction Markets/Trading": [
+            "KALSHI"
+          ],
+          "Anthropic/AI Safety": [
+            "ANTHROPIC_IPO_PENDING"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞呈現以下重要趨勢：(1)Kalshi預測市場平台擴展至股票交易，驗證了現有prediction markets主題的重要性，但需新增KALSHI至追蹤清單，因其商業模式正轉向主流金融市場。(2)Anthropic IPO登場，市場將其視為AI產業新亮點，建議新增追蹤（待IPO上市後）。(3)Nvidia面臨領導層風險(Kress接棒Huang)、中國政策收緊、市場估值過度集中等隱憂，但現有清單已涵蓋此風險。(4)GLP-1主題持續強化(Novo兒童肥胖症新數據)、能源價格穩定($85油價)、預測市場與政治結合等趨勢均已在清單中。(5)Fed對AI持謹慎態度、California對OpenAI訴訟、AI安全評估等議題反映AI監管風險上升，現有清單已覆蓋相關防禦標的。整體而言，現有清單涵蓋主流趨勢充分，僅需補充Kalshi作為預測市場直接標的，以及關注Anthropic IPO進展。"
     }
   ]
 }
