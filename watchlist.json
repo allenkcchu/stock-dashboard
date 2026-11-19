@@ -7,7 +7,6 @@
     ],
     "AI Chips": [
       "NVDA",
-      "AMD",
       "AVGO",
       "INTC",
       "AVEO"
@@ -408,6 +407,24 @@
     ],
     "Anthropic/AI Safety": [
       "ANTHROPIC_IPO_PENDING"
+    ],
+    "Banking/Financial Systems": [
+      "JPM"
+    ],
+    "Geopolitical Energy Policy": [
+      "COP",
+      "CVX"
+    ],
+    "Family Office/Wealth Management": [
+      "BLK",
+      "SCHW"
+    ],
+    "Drug Shortage/Healthcare Supply": [
+      "SNY"
+    ],
+    "Media/Sports Rights": [
+      "NFLX",
+      "DIS"
     ]
   },
   "history": [
@@ -1429,6 +1446,39 @@
         "removed": {}
       },
       "reasoning": "本週新聞呈現以下重要趨勢：(1)Kalshi預測市場平台擴展至股票交易，驗證了現有prediction markets主題的重要性，但需新增KALSHI至追蹤清單，因其商業模式正轉向主流金融市場。(2)Anthropic IPO登場，市場將其視為AI產業新亮點，建議新增追蹤（待IPO上市後）。(3)Nvidia面臨領導層風險(Kress接棒Huang)、中國政策收緊、市場估值過度集中等隱憂，但現有清單已涵蓋此風險。(4)GLP-1主題持續強化(Novo兒童肥胖症新數據)、能源價格穩定($85油價)、預測市場與政治結合等趨勢均已在清單中。(5)Fed對AI持謹慎態度、California對OpenAI訴訟、AI安全評估等議題反映AI監管風險上升，現有清單已覆蓋相關防禦標的。整體而言，現有清單涵蓋主流趨勢充分，僅需補充Kalshi作為預測市場直接標的，以及關注Anthropic IPO進展。"
+    },
+    {
+      "date": "2026-11-19",
+      "action": "update",
+      "changes": {
+        "added": {
+          "Banking/Financial Systems": [
+            "JPM"
+          ],
+          "Geopolitical Energy Policy": [
+            "COP",
+            "CVX"
+          ],
+          "Family Office/Wealth Management": [
+            "BLK",
+            "SCHW"
+          ],
+          "Drug Shortage/Healthcare Supply": [
+            "SNY"
+          ],
+          "Media/Sports Rights": [
+            "NFLX",
+            "DIS"
+          ]
+        },
+        "removed": {
+          "AI Chips": [
+            "AMD"
+          ],
+          "Defense": []
+        }
+      },
+      "reasoning": "本週新聞呈現多項重要趨勢變化：(1)AMD因中國出口風險被踩空，建議暫時移出追蹤以觀察後續政策發展；(2)Outlook全球銀行系統宕機凸顯金融基礎設施風險，JPM等大型銀行值得關注；(3)Trump談話暗示美中俄能源合作升溫，油氣類股面臨地緣政治重估；(4)Anthropic IPO與家族辦公室轉向AI相關資產投資，顯示財富管理業務轉向，BLK與SCHW應納入追蹤；(5)Sanofi罕見病藥物短缺與媒體集團爭奪體育版權等新聞反映供應鏈與內容娛樂的結構性機會。整體而言，地緣政治風險、金融系統穩健性、以及能源政策調整成為新的投資焦點。"
     }
   ]
 }
