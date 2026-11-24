@@ -425,6 +425,15 @@
     "Media/Sports Rights": [
       "NFLX",
       "DIS"
+    ],
+    "AI Deepfake/Content Safety": [
+      "RKLB"
+    ],
+    "Chip Supply Chain/Government Intervention": [
+      "DECART"
+    ],
+    "Cybersecurity M&A": [
+      "ZS"
     ]
   },
   "history": [
@@ -1479,6 +1488,25 @@
         }
       },
       "reasoning": "本週新聞呈現多項重要趨勢變化：(1)AMD因中國出口風險被踩空，建議暫時移出追蹤以觀察後續政策發展；(2)Outlook全球銀行系統宕機凸顯金融基礎設施風險，JPM等大型銀行值得關注；(3)Trump談話暗示美中俄能源合作升溫，油氣類股面臨地緣政治重估；(4)Anthropic IPO與家族辦公室轉向AI相關資產投資，顯示財富管理業務轉向，BLK與SCHW應納入追蹤；(5)Sanofi罕見病藥物短缺與媒體集團爭奪體育版權等新聞反映供應鏈與內容娛樂的結構性機會。整體而言，地緣政治風險、金融系統穩健性、以及能源政策調整成為新的投資焦點。"
+    },
+    {
+      "date": "2026-11-24",
+      "action": "update",
+      "changes": {
+        "added": {
+          "AI Deepfake/Content Safety": [
+            "RKLB"
+          ],
+          "Chip Supply Chain/Government Intervention": [
+            "DECART"
+          ],
+          "Cybersecurity M&A": [
+            "ZS"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞呈現以下重要趨勢：(1) Jensen Huang重返Nvidia CEO引發市場反彈，確認AI晶片龍頭地位穩固，現有AI Chips清單保持不變；(2) 新興趨勢包括SpaceX Grok AI深偽安全問題凸顯，建議新增「AI Deepfake/Content Safety」類別追蹤RKLB；(3) Amazon收購Decart晶片軟體新創，反映美國政府推動晶片供應鏈獨立，建議新增「Chip Supply Chain/Government Intervention」；(4) CrowdStrike收購Zscaler形成44億美元網安併購案，AI驅動網路威脅升級，建議新增ZS至「Cybersecurity M&A」類別；(5) Fed升息預期、ESG投資限制提案、房市凍結等宏觀因素對Real Estate清單形成壓力但無明確利空；(6) Trump政府加強對Nvidia晶片出口管制調查，現有Defense及Semiconductors清單已涵蓋相關風險。整體而言，現有追蹤框架仍適切，僅需補充新興安全與併購趨勢。"
     }
   ]
 }
