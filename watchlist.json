@@ -434,6 +434,12 @@
     ],
     "Cybersecurity M&A": [
       "ZS"
+    ],
+    "European Satellite/Space Defense": [
+      "EOAN"
+    ],
+    "K-Beauty/Consumer Brands": [
+      "BEAUT"
     ]
   },
   "history": [
@@ -1507,6 +1513,22 @@
         "removed": {}
       },
       "reasoning": "本週新聞呈現以下重要趨勢：(1) Jensen Huang重返Nvidia CEO引發市場反彈，確認AI晶片龍頭地位穩固，現有AI Chips清單保持不變；(2) 新興趨勢包括SpaceX Grok AI深偽安全問題凸顯，建議新增「AI Deepfake/Content Safety」類別追蹤RKLB；(3) Amazon收購Decart晶片軟體新創，反映美國政府推動晶片供應鏈獨立，建議新增「Chip Supply Chain/Government Intervention」；(4) CrowdStrike收購Zscaler形成44億美元網安併購案，AI驅動網路威脅升級，建議新增ZS至「Cybersecurity M&A」類別；(5) Fed升息預期、ESG投資限制提案、房市凍結等宏觀因素對Real Estate清單形成壓力但無明確利空；(6) Trump政府加強對Nvidia晶片出口管制調查，現有Defense及Semiconductors清單已涵蓋相關風險。整體而言，現有追蹤框架仍適切，僅需補充新興安全與併購趨勢。"
+    },
+    {
+      "date": "2026-11-26",
+      "action": "update",
+      "changes": {
+        "added": {
+          "European Satellite/Space Defense": [
+            "EOAN"
+          ],
+          "K-Beauty/Consumer Brands": [
+            "BEAUT"
+          ]
+        },
+        "removed": {}
+      },
+      "reasoning": "本週新聞呈現以下重要趨勢：(1)歐洲衛星產業崛起——新聞報導歐洲最大衛星工廠開設以對抗馬斯克Starlink，建議新增歐洲太空防禦類股票以平衡地緣政治風險；(2)韓國K-beauty品牌在全球熱銷，尤其亞馬遜黑五前夕銷售強勁，反映消費者轉向非美國品牌趨勢；(3)Anthropic上市後表現疲弱提醒AI IPO風險，但不足以移除既有AI芯片與基礎設施持股；(4)貿易戰升溫（美國對14國加關稅、特朗普威脅進一步行動）支撐防禦與能源相關股票；(5)芯片供應鏈地緣政治化加劇（美國限制中國AI芯片、歐洲衛星產業獨立化）強化既有半導體與防禦類股配置必要性；(6)機器人自動化1-2年內實現家務應用，確認自動化趨勢但現有XPEV與機器人類持股已涵蓋。建議審慎觀察歐洲太空防禦發展與K-beauty消費轉向，但保持核心AI芯片、防禦、能源持倉不變。"
     }
   ]
 }
